@@ -27,8 +27,6 @@ export async function POST(request: Request) {
     //   });
     // }
 
-    console.log(`Newsletter signup: ${email} (source: ${source || "unknown"})`);
-
     return NextResponse.json({ success: true });
   } catch {
     return NextResponse.json(

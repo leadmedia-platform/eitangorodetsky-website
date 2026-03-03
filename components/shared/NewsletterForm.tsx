@@ -16,11 +16,14 @@ export default function NewsletterForm({
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    // Placeholder — wire up ConvertKit/Substack in Phase 7
-    console.log(`Newsletter signup: ${email} (source: ${source})`);
+    await fetch("/api/newsletter", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, source }),
+    });
     setSubmitted(true);
     onSuccess?.();
   };
@@ -47,6 +50,7 @@ export default function NewsletterForm({
         </label>
         <input
           id={`newsletter-${source}`}
+          name="email"
           type="email"
           required
           placeholder="your@email.com"
