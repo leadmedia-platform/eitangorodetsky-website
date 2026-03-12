@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
 import Navigation from "@/components/global/Navigation";
 import Footer from "@/components/global/Footer";
@@ -65,6 +66,9 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${inter.variable} ${jetbrains.variable}`}
     >
+      <head>
+        <Script src="https://agentready.site/api/snippet/cmmfvwpu30001l204eedrvi0l/ar.js" strategy="afterInteractive" />
+      </head>
       <body className="antialiased">
         <SchemaOrg data={getPersonSchema()} />
         <SchemaOrg data={getOrganizationSchema()} />
