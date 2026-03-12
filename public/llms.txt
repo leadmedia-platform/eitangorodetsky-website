@@ -1,10 +1,30 @@
 # Eitan Gorodetsky
-> General website
+> Operations Intelligence Architect specializing in business operations strategy, consulting, and insights
 
-## Important Pages
+## Core Pages
+- [Home](https://eitangorodetsky.com/): Introduction to Eitan Gorodetsky and his operations intelligence expertise
+- [About Eitan Gorodetsky](https://eitangorodetsky.com/about): Professional background and experience in operations intelligence architecture
+- [Operations Intelligence Architecture](https://eitangorodetsky.com/oia): Framework and methodology for operations intelligence
+- [Work With Me](https://eitangorodetsky.com/work-with-me): Consulting services and engagement opportunities
 
-No indexed pages available for analysis.
+## Stories & Insights
+- [Stories](https://eitangorodetsky.com/stories): Collection of operational intelligence narratives and case studies
+- [The Meeting After the Meeting](https://eitangorodetsky.com/stories/the-meeting-after-the-meeting): Story about hidden organizational dynamics
+- [The Number Nobody Looks At](https://eitangorodetsky.com/stories/the-number-nobody-looks-at): Insights on overlooked operational metrics
+- [The Vendor Who Knew Too Much](https://eitangorodetsky.com/stories/the-vendor-who-knew-too-much): Story about external operational perspectives
+- [What the Dashboard Hides](https://eitangorodetsky.com/stories/what-the-dashboard-hides): Analysis of dashboard limitations and blind spots
+
+## Resources
+- [Tools](https://eitangorodetsky.com/tools): Operational intelligence tools and resources
+
+## Legal
+- [Privacy Policy](https://eitangorodetsky.com/privacy): Data privacy and protection information
+- [Terms of Service](https://eitangorodetsky.com/terms): Terms and conditions for website use
 
 ## Topics of Authority
-
-Unable to determine topics of authority due to insufficient indexed page content.
+- Operations Intelligence Architecture
+- Business Operations Strategy
+- Organizational Metrics and Analytics
+- Operational Decision-Making
+- Consulting and Advisory Services
+- Real-world operational storytelling and case studies
