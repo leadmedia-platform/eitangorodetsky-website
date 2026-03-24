@@ -13,6 +13,7 @@
     "@vercel/speed-insights": "^1.1.0",
     "framer-motion": "^12.38.0",
     "gray-matter": "^4.0.3",
+    "lightningcss-darwin-arm64": "^1.32.0",
     "next": "15.5.12",
     "next-mdx-remote": "^6.0.0",
     "react": "19.1.0",
