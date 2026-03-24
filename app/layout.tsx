@@ -7,6 +7,7 @@ import SkipLink from "@/components/global/SkipLink";
 import NewsletterPopup from "@/components/global/NewsletterPopup";
 import Analytics from "@/components/global/Analytics";
 import SchemaOrg from "@/components/global/SchemaOrg";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL } from "@/lib/constants";
 import { getPersonSchema, getOrganizationSchema } from "@/lib/structured-data";
 import "./globals.css";
@@ -69,7 +70,10 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} ${jetbrains.variable}`}
     >
       <head>
-        <Script src="https://agentready.site/api/snippet/cmmfvwpu30001l204eedrvi0l/ar.js" strategy="afterInteractive" />
+        <Script
+          src="https://agentready.site/api/snippet/cmmfvwpu30001l204eedrvi0l/ar.js"
+          strategy="afterInteractive"
+        />
       </head>
       <body className="antialiased">
         <SchemaOrg data={getPersonSchema()} />
@@ -80,6 +84,7 @@ export default function RootLayout({
         <Footer />
         <NewsletterPopup />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
