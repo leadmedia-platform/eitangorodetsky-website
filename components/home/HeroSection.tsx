@@ -1,21 +1,65 @@
-import Button from "@/components/shared/Button";
+"use client";
+
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="flex min-h-screen items-center justify-center bg-brand-cream px-6">
-      <div className="mx-auto max-w-[680px] pt-20 text-center">
-        <h1 className="font-serif text-4xl font-bold leading-tight text-brand-charcoal md:text-5xl lg:text-[56px]">
-          I&apos;ve spent 15 years inside the machine. I tell the stories
-          nobody tells in meetings.
-        </h1>
-        <p className="mt-6 text-lg leading-relaxed text-text-secondary md:text-xl">
-          Operations Intelligence Architect — helping companies find
-          what&apos;s hidden and fix what&apos;s broken.
-        </p>
-        <div className="mt-10">
-          <Button href="/stories">Read the stories</Button>
+    <section
+      className="relative flex min-h-screen items-end justify-start overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(135deg, #0d2b3e 0%, #1B5E8C 40%, #2D8B6F 100%)",
+      }}
+    >
+      {/* Subtle texture overlay */}
+      <div
+        className="absolute inset-0 opacity-10"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 20% 80%, #D4A853 0%, transparent 50%), radial-gradient(circle at 80% 20%, #2D8B6F 0%, transparent 50%)",
+        }}
+      />
+
+      {/* Content */}
+      <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6 pb-20 pt-40 md:pb-28">
+        <div className="max-w-[720px]">
+          <p className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-white/60">
+            Senior Marketing &amp; Operations Executive
+          </p>
+
+          <h1 className="font-serif text-5xl font-bold leading-[1.1] text-white md:text-6xl lg:text-7xl">
+            EITAN
+            <br />
+            GORODETSKY
+          </h1>
+
+          <p className="mt-6 text-xl font-light leading-relaxed text-white/85 md:text-2xl">
+            I build growth engines, lead people, and find what&apos;s hidden.
+          </p>
+
+          <p className="mt-3 text-base text-white/60 md:text-lg">
+            15 years across iGaming, Tech &amp; Digital — €100M+ budgets, 20+ markets, teams of 120.
+          </p>
+
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Link
+              href="/career"
+              className="rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-brand-dark transition-all hover:bg-brand-gold hover:text-brand-dark"
+            >
+              View My Career
+            </Link>
+            <Link
+              href="/thinking"
+              className="rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"
+            >
+              Read My Thinking
+            </Link>
+          </div>
         </div>
       </div>
+
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-brand-bg to-transparent" />
     </section>
   );
 }

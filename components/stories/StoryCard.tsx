@@ -1,39 +1,45 @@
 import Link from "next/link";
 import type { Story } from "@/lib/types";
-import { VOICE_COLORS } from "@/lib/constants";
 
 interface StoryCardProps {
   story: Story;
 }
 
+const voiceBadge: Record<string, string> = {
+  storyteller: "bg-brand-gold text-brand-dark",
+  wit: "bg-brand-teal text-white",
+  confessional: "bg-brand-blue text-white",
+  witness: "bg-brand-gray text-white",
+};
+
 export default function StoryCard({ story }: StoryCardProps) {
   const { slug, frontmatter } = story;
-  const voiceColor = VOICE_COLORS[frontmatter.voice] || VOICE_COLORS.storyteller;
+  const badge = voiceBadge[frontmatter.voice] || voiceBadge.storyteller;
 
   return (
     <Link
       href={`/stories/${slug}`}
-      className="group block rounded-lg border-2 border-transparent bg-white p-6 transition-all hover:border-brand-amber hover:shadow-md"
+      className="group flex flex-col rounded-xl bg-white p-6 transition-all hover:shadow-md hover:-translate-y-0.5"
     >
       {/* Voice Tag */}
       <span
-        className={`inline-block rounded-full px-3 py-1 text-xs font-medium capitalize ${voiceColor}`}
+        className={`self-start inline-block rounded-full px-3 py-1 text-xs font-semibold capitalize ${badge}`}
       >
         {frontmatter.voice}
       </span>
 
       {/* Title */}
-      <h3 className="mt-3 font-serif text-xl font-bold leading-snug text-brand-charcoal md:text-2xl">
+      <h3 className="mt-4 font-serif text-xl font-bold leading-snug text-brand-dark group-hover:text-brand-blue transition-colors">
         {frontmatter.title}
       </h3>
 
       {/* Excerpt */}
-      <p className="mt-2 line-clamp-2 text-base leading-relaxed text-text-secondary">
+      <p className="mt-2 line-clamp-2 flex-1 text-sm leading-relaxed text-brand-gray">
         {frontmatter.excerpt}
       </p>
 
       {/* Metadata */}
-      <div className="mt-4 flex items-center gap-3 font-mono text-xs text-text-secondary">
+      <div className="mt-5 flex items-center gap-3 font-mono text-xs text-brand-gray/70">
         <time dateTime={frontmatter.date}>
           {new Date(frontmatter.date).toLocaleDateString("en-US", {
             month: "short",
@@ -41,7 +47,7 @@ export default function StoryCard({ story }: StoryCardProps) {
             year: "numeric",
           })}
         </time>
-        <span aria-hidden="true">|</span>
+        <span aria-hidden="true">·</span>
         <span>{frontmatter.readTime}</span>
       </div>
     </Link>

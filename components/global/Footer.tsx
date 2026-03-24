@@ -1,39 +1,55 @@
 import Link from "next/link";
-import { FOOTER_NAV_LINKS, SOCIAL_LINKS, SITE_NAME } from "@/lib/constants";
+import { SOCIAL_LINKS, SITE_NAME } from "@/lib/constants";
+
+const navigate = [
+  { label: "Home",         href: "/" },
+  { label: "Career",       href: "/career" },
+  { label: "Thinking",     href: "/thinking" },
+  { label: "Stories",      href: "/stories" },
+  { label: "Inner World",  href: "/inner-world" },
+  { label: "About",        href: "/about" },
+  { label: "Contact",      href: "/contact" },
+  { label: "Work With Me", href: "/work-with-me" },
+];
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t-2 border-brand-amber bg-brand-cream">
-      <div className="mx-auto grid max-w-[1200px] gap-8 px-6 py-12 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="border-t border-brand-dark/10 bg-brand-card">
+      <div className="mx-auto grid max-w-[1280px] gap-10 px-6 py-16 sm:grid-cols-2 lg:grid-cols-4">
         {/* Brand */}
-        <div>
+        <div className="lg:col-span-1">
           <Link
             href="/"
-            className="font-serif text-lg font-bold text-brand-charcoal"
+            className="font-serif text-base font-bold tracking-widest text-brand-dark uppercase"
           >
             {SITE_NAME}
           </Link>
-          <p className="mt-2 text-sm leading-relaxed text-text-secondary">
-            Operations Intelligence Architect
+          <p className="mt-3 text-sm leading-relaxed text-brand-gray">
+            Senior Marketing & Operations Executive.
+            <br />
+            Central Coast, Australia.
           </p>
-          <p className="mt-1 text-xs text-text-secondary">
+          <p className="mt-4 text-xs italic text-brand-gray">
+            &ldquo;Built with curiosity and too much coffee.&rdquo;
+          </p>
+          <p className="mt-3 text-xs text-brand-gray">
             &copy; {currentYear} {SITE_NAME}. All rights reserved.
           </p>
         </div>
 
         {/* Navigate */}
         <div>
-          <h3 className="font-serif text-sm font-bold uppercase tracking-wider text-brand-charcoal">
+          <h3 className="text-xs font-bold uppercase tracking-wider text-brand-dark">
             Navigate
           </h3>
-          <ul className="mt-3 space-y-2">
-            {FOOTER_NAV_LINKS.map((link) => (
+          <ul className="mt-4 space-y-2.5">
+            {navigate.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-text-primary transition-colors hover:text-brand-amber"
+                  className="text-sm text-brand-gray transition-colors hover:text-brand-blue"
                 >
                   {link.label}
                 </Link>
@@ -44,35 +60,43 @@ export default function Footer() {
 
         {/* Connect */}
         <div>
-          <h3 className="font-serif text-sm font-bold uppercase tracking-wider text-brand-charcoal">
+          <h3 className="text-xs font-bold uppercase tracking-wider text-brand-dark">
             Connect
           </h3>
-          <ul className="mt-3 space-y-2">
+          <ul className="mt-4 space-y-2.5">
             {SOCIAL_LINKS.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-text-primary transition-colors hover:text-brand-amber"
+                  className="text-sm text-brand-gray transition-colors hover:text-brand-blue"
                 >
                   {link.label}
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href="mailto:eitangorodetsky@gmail.com"
+                className="text-sm text-brand-gray transition-colors hover:text-brand-blue"
+              >
+                Email
+              </a>
+            </li>
           </ul>
         </div>
 
         {/* Legal */}
         <div>
-          <h3 className="font-serif text-sm font-bold uppercase tracking-wider text-brand-charcoal">
+          <h3 className="text-xs font-bold uppercase tracking-wider text-brand-dark">
             Legal
           </h3>
-          <ul className="mt-3 space-y-2">
+          <ul className="mt-4 space-y-2.5">
             <li>
               <Link
                 href="/privacy"
-                className="text-sm text-text-primary transition-colors hover:text-brand-amber"
+                className="text-sm text-brand-gray transition-colors hover:text-brand-blue"
               >
                 Privacy Policy
               </Link>
@@ -80,7 +104,7 @@ export default function Footer() {
             <li>
               <Link
                 href="/terms"
-                className="text-sm text-text-primary transition-colors hover:text-brand-amber"
+                className="text-sm text-brand-gray transition-colors hover:text-brand-blue"
               >
                 Terms of Service
               </Link>
@@ -90,9 +114,9 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-brand-charcoal/10 px-6 py-4">
-        <p className="mx-auto max-w-[1200px] text-center font-mono text-xs text-text-secondary">
-          Operations Intelligence Architect — Finding what dashboards hide.
+      <div className="border-t border-brand-dark/8 px-6 py-4">
+        <p className="mx-auto max-w-[1280px] text-center font-mono text-xs text-brand-gray">
+          Senior Marketing & Operations Leader — Building growth engines, leading people, finding what&apos;s hidden.
         </p>
       </div>
     </footer>

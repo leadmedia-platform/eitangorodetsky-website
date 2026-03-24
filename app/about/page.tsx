@@ -1,138 +1,229 @@
 import type { Metadata } from "next";
-import Section from "@/components/shared/Section";
-import Button from "@/components/shared/Button";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Eitan Gorodetsky — Operations Intelligence Architect",
+  title: "About — Eitan Gorodetsky",
   description:
-    "15 years inside the machine. The story of why I tell the stories nobody tells in meetings.",
+    "Born in Israel. Shaped by Malta. Now building on the Central Coast of Australia. The full story of 15 years finding what's hidden.",
 };
 
 const timeline = [
-  { year: "2010", title: "Entered Operations", description: "Started in the trenches of operational management, learning what dashboards don't show." },
-  { year: "2014", title: "First Major Discovery", description: "Found $1.2M in hidden costs at a mid-size operator. Realized this was a pattern, not an exception." },
-  { year: "2017", title: "iGaming Deep Dive", description: "Moved into the iGaming industry. Discovered an entire sector running on workarounds and duct tape." },
-  { year: "2020", title: "Built the Framework", description: "Developed the Operations Intelligence Architecture methodology after seeing the same problems everywhere." },
-  { year: "2023", title: "Fractional COO", description: "Began advising companies as a fractional operations leader, applying OIA across industries." },
-  { year: "2026", title: "Telling the Stories", description: "Launched this platform to share the stories nobody tells in meetings — and help others find what's hidden." },
+  {
+    year: "2010",
+    title: "First steps in digital",
+    description:
+      "Started in Israeli digital marketing agencies. Learned how the internet actually works — not the theory, the practice.",
+  },
+  {
+    year: "2014",
+    title: "888 Holdings",
+    description:
+      "Joined one of the best companies in Israel to work for. Discovered iGaming and never looked back. SEO went from a skill to a craft.",
+  },
+  {
+    year: "2016",
+    title: "Malta chapter begins",
+    description:
+      "Moved to Malta for Catena Media. The iGaming capital of the world. Learned what scale looks like — hundreds of sites, millions of visitors.",
+  },
+  {
+    year: "2018",
+    title: "Betsson Group",
+    description:
+      "Director of Acquisition across 20+ regulated markets. €100M+ budgets. 40+ person team. This is where the pattern became clear: the biggest opportunities are hiding in plain sight.",
+  },
+  {
+    year: "2022",
+    title: "CPO at Speed Media Group",
+    description:
+      "Became Chief Product Officer. Ran multiple M&A deals from the inside — due diligence, integration, portfolio strategy. Saw companies in a completely new way.",
+  },
+  {
+    year: "2023",
+    title: "TonyBet and new markets",
+    description:
+      "Director of Performance Marketing across 6 markets: Ireland, Canada, Netherlands, Spain, Latvia, Estonia. TV, sponsorships, the full spectrum.",
+  },
+  {
+    year: "2025",
+    title: "The intentional year",
+    description:
+      "Travelled. Went deep on AI. Built AgentReady.site from scratch to understand AI agent architecture. Surfed. Read. Thought. This is how I do transitions.",
+  },
+  {
+    year: "2026",
+    title: "Australia and what's next",
+    description:
+      "Central Coast. Ocean. Clarity. Fractional COO at IGMS, building operational systems for new ventures. Looking for the right full-time opportunity. Building something meaningful.",
+  },
 ];
 
 const values = [
   {
     title: "Honest",
-    body: "The truth about operations is rarely comfortable. I believe in saying what needs to be said, even when the room goes quiet. Honesty isn't just a value — it's the foundation of every insight worth sharing. If a process is broken, I'll say so. If a number is hiding something, I'll find it.",
+    body: "The truth about operations is rarely comfortable. I say what needs to be said.",
   },
   {
     title: "Warm",
-    body: "Operations work is fundamentally about people. Behind every broken process is a team doing their best with imperfect tools. I approach every engagement with empathy, knowing that the humans in the system are not the problem — they're the solution waiting to be empowered.",
+    body: "Behind every broken process is a team doing their best. I lead with empathy.",
   },
   {
     title: "Deep",
-    body: "Surface-level analysis creates surface-level fixes. I go deep — into the data, into the processes, into the conversations that happen after the meetings. The insights that matter most are always buried beneath layers of assumption, workaround, and inherited practice.",
+    body: "Surface-level analysis creates surface-level fixes. I go deep.",
+  },
+  {
+    title: "Curious",
+    body: "I never stop learning. From AI architecture to Kabbalah to freediving.",
+  },
+  {
+    title: "Present",
+    body: "The best insights come from paying attention. To data, to people, to silence.",
   },
 ];
 
 export default function AboutPage() {
   return (
     <div className="pt-20">
-      {/* Narrative Section */}
-      <Section>
-        <div className="mx-auto max-w-[680px]">
-          <h1 className="font-serif text-4xl font-bold text-brand-charcoal md:text-5xl">
-            About Eitan
+      {/* Hero */}
+      <section
+        className="py-24 md:py-32"
+        style={{ background: "linear-gradient(135deg, #0d2b3e 0%, #1B5E8C 100%)" }}
+      >
+        <div className="mx-auto max-w-[1280px] px-6">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-white/60">
+            About
+          </p>
+          <h1 className="font-serif text-4xl font-bold text-white md:text-5xl">
+            The full story
           </h1>
-          <div className="mt-8 space-y-6 text-lg leading-[1.8] text-brand-charcoal">
+          <p className="mt-4 text-lg text-white/70">
+            Born in Israel. Built in Malta. Now on the Central Coast of Australia.
+          </p>
+        </div>
+      </section>
+
+      {/* Narrative */}
+      <section className="bg-brand-bg py-24 md:py-32">
+        <div className="mx-auto max-w-[680px] px-6">
+          <div className="space-y-6 text-lg leading-[1.85] text-brand-dark">
             <p>
-              Fifteen years ago, I walked into my first operations role and discovered something that would define my career: the most important things in any organization are the things nobody talks about.
+              I grew up in Israel and stumbled into digital marketing the way most people do — curiosity, necessity, and a job posting at the right moment. That was 2010. I didn&apos;t know then that I&apos;d spend the next 15 years inside some of the most complex, fast-moving, and fascinating businesses in the world.
             </p>
             <p>
-              Not the KPIs on the dashboard. Not the metrics in the board deck. The other things. The spreadsheet that three people maintain and nobody questions. The process that costs more to manage than the spending it&apos;s designed to prevent. The vendor dependency that grew so slowly nobody noticed until it became the company&apos;s single point of failure.
+              888 Holdings was where it clicked. One of the best companies in Israel to work for — rigorous, global, genuinely interesting. SEO stopped being a job and became a lens. I started seeing patterns: in traffic, in conversion, in the gap between what the numbers showed and what was actually happening.
             </p>
             <p>
-              I&apos;ve spent my career finding those things. In early-stage startups and mid-size operators. In iGaming companies running on inherited processes and growing companies building operational infrastructure from scratch. Across industries, the pattern is always the same: the biggest opportunities are hiding in plain sight.
+              Then Malta. The move that changed everything. Catena Media, then Betsson Group. I went from managing SEO to leading digital acquisition across 20+ regulated markets, with €100M+ budgets and a team that grew to 120 people. Somewhere in there, a job title became irrelevant. What mattered was the work: finding what was hidden, fixing what was broken, building what would last.
             </p>
             <p>
-              I call this work Operations Intelligence Architecture — the discipline of seeing what dashboards hide, saying what meetings avoid, and fixing what everyone has learned to work around.
+              As CPO at Speed Media Group, I sat in on M&A deals from the inside — seeing companies through an acquisitor&apos;s eyes. The pattern showed up again. The biggest risks were always the things nobody was looking at. The quiet dependencies. The processes running on institutional memory. The costs hiding in plain sight.
             </p>
             <p>
-              Today, I do this work as an advisor, consultant, and fractional COO. I also tell the stories. Because every hidden cost, every broken process, every uncomfortable truth is also a story worth sharing. And sharing those stories is how we build better organizations.
+              TonyBet gave me six new markets in two years: Ireland, Canada, Netherlands, Spain, Latvia, Estonia. TV campaigns. Sponsorships. Performance marketing at full tilt. By this point I&apos;d built enough of a framework that launching a market felt like something I could do in my sleep. Which meant it was time to learn something new.
+            </p>
+            <p>
+              2025 was intentional. I travelled. I went deep on AI — not reading about it, building with it. AgentReady.site is what that looks like. I surfed. I read. I thought about what the next chapter should look like.
+            </p>
+            <p>
+              The answer was Australia. Central Coast. Ocean. Clarity. I&apos;m currently Fractional COO at IGMS, building operational infrastructure for new ventures from scratch. And I&apos;m looking for the right full-time opportunity — a Director, VP, CMO, or COO role where I can do the work I do best.
             </p>
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* Photo Gallery Placeholder */}
-      <Section className="bg-bg-secondary">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {[1, 2, 3].map((i) => (
-            <div
-              key={i}
-              className="flex aspect-[4/3] items-center justify-center rounded-lg bg-brand-charcoal/5"
-            >
-              <span className="text-sm text-text-secondary">Photo {i}</span>
-            </div>
-          ))}
+      <section className="bg-brand-card py-16">
+        <div className="mx-auto max-w-[1280px] px-6">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="flex aspect-[4/3] items-center justify-center rounded-xl bg-brand-dark/5"
+              >
+                <span className="text-sm text-brand-gray">Photo {i}</span>
+              </div>
+            ))}
+          </div>
         </div>
-      </Section>
+      </section>
 
       {/* Timeline */}
-      <Section>
-        <h2 className="mb-12 text-center font-serif text-3xl font-bold text-brand-charcoal md:text-4xl">
-          The Journey
-        </h2>
-        <div className="mx-auto max-w-[600px]">
-          <div className="relative border-l-2 border-brand-amber pl-8">
-            {timeline.map((item) => (
-              <div key={item.year} className="relative mb-10 last:mb-0">
-                <div className="absolute -left-[calc(2rem+5px)] top-1 h-3 w-3 rounded-full bg-brand-amber" />
-                <span className="font-serif text-xl font-bold text-brand-amber">
-                  {item.year}
-                </span>
-                <h3 className="mt-1 font-serif text-lg font-bold text-brand-charcoal">
-                  {item.title}
+      <section className="bg-brand-bg py-24 md:py-32">
+        <div className="mx-auto max-w-[1280px] px-6">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-brand-teal">
+            The Journey
+          </p>
+          <h2 className="mb-16 font-serif text-3xl font-bold text-brand-dark md:text-4xl">
+            How I got here
+          </h2>
+
+          <div className="relative max-w-[680px]">
+            <div className="absolute left-[44px] top-0 bottom-0 w-px bg-brand-gold/30 hidden md:block" />
+            <div className="space-y-10">
+              {timeline.map((item) => (
+                <div key={item.year} className="md:flex md:gap-8">
+                  <div className="mb-2 md:mb-0 md:w-[36px] md:flex-shrink-0">
+                    <span className="font-mono text-sm font-bold text-brand-gold">
+                      {item.year}
+                    </span>
+                  </div>
+                  <div className="relative md:pl-10">
+                    <div className="absolute left-[-5px] top-1 hidden h-2.5 w-2.5 rounded-full bg-brand-gold md:block" />
+                    <h3 className="font-serif text-lg font-bold text-brand-dark">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-base leading-relaxed text-brand-gray">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="bg-brand-card py-24 md:py-32">
+        <div className="mx-auto max-w-[1280px] px-6">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-brand-teal">
+            What I Believe
+          </p>
+          <h2 className="mb-16 font-serif text-3xl font-bold text-brand-dark md:text-4xl">
+            Five values. Non-negotiable.
+          </h2>
+          <div className="grid gap-10 md:grid-cols-3 lg:grid-cols-5">
+            {values.map((v) => (
+              <div key={v.title}>
+                <h3 className="font-serif text-xl font-bold text-brand-blue">
+                  {v.title}
                 </h3>
-                <p className="mt-1 text-base leading-relaxed text-text-secondary">
-                  {item.description}
+                <p className="mt-3 text-sm leading-relaxed text-brand-gray">
+                  {v.body}
                 </p>
               </div>
             ))}
           </div>
         </div>
-      </Section>
+      </section>
 
-      {/* Values */}
-      <Section className="bg-bg-secondary">
-        <h2 className="mb-12 text-center font-serif text-3xl font-bold text-brand-charcoal md:text-4xl">
-          What I Believe
-        </h2>
-        <div className="grid gap-8 md:grid-cols-3">
-          {values.map((value) => (
-            <div key={value.title}>
-              <h3 className="font-serif text-2xl font-bold text-brand-charcoal">
-                {value.title}
-              </h3>
-              <p className="mt-4 text-base leading-relaxed text-text-secondary">
-                {value.body}
-              </p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      {/* Newsletter CTA */}
-      <Section>
-        <div className="text-center">
-          <h2 className="font-serif text-3xl font-bold text-brand-charcoal md:text-4xl">
-            Want the deeper story?
+      {/* CTA */}
+      <section className="bg-brand-bg py-20">
+        <div className="mx-auto max-w-[600px] px-6 text-center">
+          <h2 className="font-serif text-2xl font-bold text-brand-dark md:text-3xl">
+            Want to have an interesting conversation?
           </h2>
-          <p className="mt-4 text-lg text-text-secondary">
-            Join 2,000+ operations leaders on the newsletter.
+          <p className="mt-4 text-base text-brand-gray">
+            Whether you&apos;re hiring, need operational consulting, or just want to talk — I&apos;m easy to reach.
           </p>
-          <div className="mt-8">
-            <Button href="#newsletter">Subscribe to the newsletter</Button>
-          </div>
+          <Link
+            href="/contact"
+            className="mt-8 inline-block rounded-full bg-brand-blue px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-brand-teal"
+          >
+            Get in touch
+          </Link>
         </div>
-      </Section>
+      </section>
     </div>
   );
 }

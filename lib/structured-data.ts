@@ -6,14 +6,20 @@ export function getPersonSchema() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: SITE_NAME,
-    jobTitle: "Operations Intelligence Architect",
+    jobTitle: "Senior Marketing & Operations Executive",
     description:
-      "Helping companies find what's hidden and fix what's broken through operational intelligence.",
+      "15+ years building growth engines, leading people, and finding what's hidden across iGaming, Tech & Digital.",
     url: SITE_URL,
     sameAs: [
-      "https://linkedin.com/in/eitangorodetsky",
+      "https://linkedin.com/in/socialeitan",
       "https://twitter.com/eitangorodetsky",
     ],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Central Coast",
+      addressRegion: "NSW",
+      addressCountry: "AU",
+    },
   };
 }
 
@@ -24,7 +30,7 @@ export function getOrganizationSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     description:
-      "Operations Intelligence Architecture — finding what dashboards hide.",
+      "Senior Marketing & Operations Leader — building growth systems, leading people, finding what's hidden.",
   };
 }
 

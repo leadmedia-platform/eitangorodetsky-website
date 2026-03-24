@@ -1,22 +1,22 @@
-import Section from "@/components/shared/Section";
-import Button from "@/components/shared/Button";
+import Link from "next/link";
 
 export default function SocialProof() {
   return (
-    <Section>
-      <div className="text-center">
-        <h2 className="font-serif text-3xl font-bold text-brand-charcoal md:text-4xl">
-          Trusted by Operations Leaders
-        </h2>
-        <p className="mt-4 text-lg text-text-secondary">
-          Client testimonials and case studies coming soon.
+    <section className="bg-brand-bg py-16 md:py-20">
+      <div className="mx-auto max-w-[1280px] px-6 text-center">
+        <p className="text-base text-brand-gray">
+          Open to Director / VP / CMO / COO roles — remote, hybrid, or on-site (Central Coast / Sydney / anywhere in Australia).
         </p>
-        <div className="mt-8">
-          <Button href="/work-with-me" variant="outline">
-            Work with me
-          </Button>
-        </div>
+        <p className="mt-2 text-sm text-brand-gray/70">
+          Also available for fractional leadership and consulting engagements.
+        </p>
+        <Link
+          href="/career"
+          className="mt-6 inline-block text-sm font-medium text-brand-blue underline-offset-4 hover:underline"
+        >
+          View my career →
+        </Link>
       </div>
-    </Section>
+    </section>
   );
 }

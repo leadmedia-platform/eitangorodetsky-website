@@ -39,6 +39,8 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   metadataBase: new URL(SITE_URL),
+  keywords: ["Eitan Gorodetsky", "CMO", "COO", "Marketing Director", "VP Marketing", "Operations Executive", "iGaming", "Digital Marketing"],
+  authors: [{ name: "Eitan Gorodetsky", url: SITE_URL }],
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,

@@ -2,21 +2,31 @@
 @plugin "@tailwindcss/typography";
 
 @theme inline {
-  /* Brand Colors */
-  --color-brand-cream: #FAF7F2;
+  /* New Brand Colors — spec 2026 */
+  --color-brand-blue: #1B5E8C;
+  --color-brand-teal: #2D8B6F;
+  --color-brand-gold: #D4A853;
+  --color-brand-dark: #1A1A1A;
+  --color-brand-gray: #6B7280;
+  --color-brand-bg: #FAFAF8;
+  --color-brand-card: #F5F3EF;
+  --color-brand-white: #FFFFFF;
+
+  /* Legacy aliases kept for components not yet migrated */
+  --color-brand-cream: #FAFAF8;
   --color-brand-charcoal: #1A1A1A;
-  --color-brand-amber: #C17B47;
-  --color-brand-terracotta: #A0522D;
-  --color-brand-sage: #7A8B6F;
-  --color-brand-navy: #1F2937;
+  --color-brand-amber: #D4A853;
+  --color-brand-terracotta: #1B5E8C;
+  --color-brand-sage: #2D8B6F;
+  --color-brand-navy: #1B5E8C;
 
-  /* Text Colors */
+  /* Text */
   --color-text-primary: #1A1A1A;
-  --color-text-secondary: #666666;
+  --color-text-secondary: #6B7280;
 
-  /* Background Colors */
-  --color-bg-primary: #FAF7F2;
-  --color-bg-secondary: #F5F2ED;
+  /* Background */
+  --color-bg-primary: #FAFAF8;
+  --color-bg-secondary: #F5F3EF;
 
   /* Font Families */
   --font-serif: var(--font-playfair), serif;
@@ -24,26 +34,39 @@
   --font-mono: var(--font-jetbrains), monospace;
 }
 
-/* Base Styles */
+/* Base */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--color-brand-cream);
-  color: var(--color-brand-charcoal);
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-dark);
   font-family: var(--font-sans);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  html.dark-auto body {
+    background-color: #111110;
+    color: #E8E5E0;
+  }
+}
+
+html.dark body {
+  background-color: #111110;
+  color: #E8E5E0;
 }
 
 /* Selection */
 ::selection {
-  background-color: var(--color-brand-amber);
-  color: var(--color-brand-cream);
+  background-color: var(--color-brand-gold);
+  color: #1A1A1A;
 }
 
 /* Focus Ring */
 *:focus-visible {
-  outline: 2px solid var(--color-brand-amber);
+  outline: 2px solid var(--color-brand-gold);
   outline-offset: 2px;
 }
 
@@ -54,8 +77,8 @@ body {
   left: 1rem;
   z-index: 100;
   padding: 0.5rem 1rem;
-  background: var(--color-brand-charcoal);
-  color: var(--color-brand-cream);
+  background: var(--color-brand-dark);
+  color: var(--color-brand-bg);
   font-family: var(--font-sans);
   font-size: 0.875rem;
   border-radius: 0 0 0.25rem 0.25rem;
@@ -68,22 +91,62 @@ body {
 
 /* Animations */
 @keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Reading progress bar */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--color-brand-gold);
+  z-index: 100;
+  transition: width 0.1s linear;
 }
 
 /* Prose overrides for story content */
 .prose-stories {
-  --tw-prose-body: var(--color-brand-charcoal);
-  --tw-prose-headings: var(--color-brand-charcoal);
-  --tw-prose-links: var(--color-brand-amber);
-  --tw-prose-bold: var(--color-brand-charcoal);
-  --tw-prose-quotes: var(--color-brand-charcoal);
-  --tw-prose-quote-borders: var(--color-brand-amber);
+  --tw-prose-body: var(--color-brand-dark);
+  --tw-prose-headings: var(--color-brand-dark);
+  --tw-prose-links: var(--color-brand-blue);
+  --tw-prose-bold: var(--color-brand-dark);
+  --tw-prose-quotes: var(--color-brand-dark);
+  --tw-prose-quote-borders: var(--color-brand-gold);
 }
+
+/* Hero gradient overlay */
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 26, 26, 0.35) 0%,
+    rgba(26, 26, 26, 0.55) 100%
+  );
+}
+
+/* Stat number style */
+.stat-number {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-brand-blue);
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .stat-number {
+    font-size: 3rem;
+  }
+}
+
+/* Voice badge colors */
+.voice-storyteller { background-color: #D4A853; color: #1A1A1A; }
+.voice-wit         { background-color: #2D8B6F; color: #FFFFFF; }
+.voice-confessional{ background-color: #1B5E8C; color: #FFFFFF; }
+.voice-witness     { background-color: #6B7280; color: #FFFFFF; }

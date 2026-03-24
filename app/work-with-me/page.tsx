@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import Section from "@/components/shared/Section";
+import Link from "next/link";
 import ServiceCard from "@/components/work/ServiceCard";
 import FAQ from "@/components/work/FAQ";
 
 export const metadata: Metadata = {
-  title: "Work With Me — Eitan Gorodetsky | Consulting Services",
+  title: "Work With Me — Eitan Gorodetsky",
   description:
-    "Margin Recovery Audit, Fractional COO, Atlassian Consulting. Let's find what's hidden.",
+    "Margin Recovery Audit, Fractional COO, Atlassian consulting, speaking. Available while primarily seeking full-time leadership roles.",
 };
 
 const services = [
@@ -15,7 +15,7 @@ const services = [
     duration: "4 weeks",
     investment: "$10,000 base + $10,000 success fee",
     description:
-      "Systematic discovery of hidden costs. A detailed margin recovery roadmap with quantified impact and prioritized actions.",
+      "Systematic discovery of hidden costs. A detailed margin recovery roadmap with quantified impact and prioritized actions. In over a decade of doing this work, I've never completed an audit without finding significant hidden costs.",
     idealFor:
       "Companies with 50–500 person teams, annual revenue $5M+",
     flagship: true,
@@ -25,17 +25,17 @@ const services = [
     duration: "Flexible (4–12 weeks typical)",
     investment: "Custom based on scope",
     description:
-      "Direct operational leadership, strategic guidance, systems improvement, team coaching, and executive advisory.",
+      "Direct operational leadership, strategic guidance, systems improvement, team coaching, and executive advisory. Ideal for companies that need senior operational thinking without a full-time hire.",
     idealFor:
       "Fast-growing startups needing operational infrastructure",
     flagship: false,
   },
   {
-    title: "Atlassian Implementation & Optimization",
+    title: "Atlassian Implementation & Optimisation",
     duration: "Ongoing (projects 6–16 weeks)",
     investment: "Custom",
     description:
-      "Jira/Confluence architecture, workflow optimization, automation setup, and team adoption training.",
+      "Jira/Confluence architecture, workflow optimisation, automation setup, and team adoption training. Built from the ground up or fixed when it's become a mess.",
     idealFor:
       "Teams struggling with Jira/Confluence setup or adoption",
     flagship: false,
@@ -45,8 +45,8 @@ const services = [
     duration: "1–4 hours",
     investment: "Custom",
     description:
-      "Board talks, company workshops, and team training on operational intelligence, margin recovery, and process design.",
-    idealFor: "Leadership teams and conferences",
+      "Board talks, company workshops, and team training on operational intelligence, margin recovery, AI in operations, and process design. Previous venues: SIGMA, MARE BALTICUM Gaming Summit.",
+    idealFor: "Leadership teams and industry conferences",
     flagship: false,
   },
 ];
@@ -82,65 +82,76 @@ const faqs = [
 export default function WorkWithMePage() {
   return (
     <div className="pt-20">
-      {/* Intro */}
-      <Section>
-        <div className="mx-auto max-w-[680px] text-center">
-          <h1 className="font-serif text-4xl font-bold text-brand-charcoal md:text-5xl">
-            How I Work
+      {/* Hero */}
+      <section
+        className="py-24 md:py-32"
+        style={{ background: "linear-gradient(135deg, #0d2b3e 0%, #1B5E8C 100%)" }}
+      >
+        <div className="mx-auto max-w-[1280px] px-6">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-white/60">
+            Consulting Services
+          </p>
+          <h1 className="font-serif text-4xl font-bold text-white md:text-5xl">
+            Work With Me
           </h1>
-          <p className="mt-4 text-lg text-text-secondary">
-            Three ways to access operational intelligence.
+          <p className="mt-6 max-w-[560px] text-lg text-white/75">
+            While I&apos;m primarily looking for a full-time leadership role, I&apos;m available for consulting engagements in these areas.
           </p>
+          <Link
+            href="/career"
+            className="mt-6 inline-block text-sm text-white/60 hover:text-white underline-offset-4 hover:underline"
+          >
+            Looking to hire? View my career →
+          </Link>
         </div>
-      </Section>
+      </section>
 
-      {/* Service Cards */}
-      <Section className="bg-bg-secondary">
-        <div className="grid gap-6 md:grid-cols-2">
-          {services.map((service) => (
-            <ServiceCard key={service.title} {...service} />
-          ))}
-        </div>
-      </Section>
-
-      {/* Testimonials Placeholder */}
-      <Section>
-        <div className="text-center">
-          <h2 className="font-serif text-3xl font-bold text-brand-charcoal md:text-4xl">
-            What Clients Say
+      {/* Services */}
+      <section className="bg-brand-bg py-24 md:py-32">
+        <div className="mx-auto max-w-[1280px] px-6">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-brand-teal">
+            Services
+          </p>
+          <h2 className="mb-16 font-serif text-3xl font-bold text-brand-dark md:text-4xl">
+            Four ways to work together
           </h2>
-          <p className="mt-4 text-lg text-text-secondary">
-            Client testimonials coming soon.
-          </p>
-        </div>
-      </Section>
-
-      {/* FAQ */}
-      <Section className="bg-bg-secondary">
-        <h2 className="mb-12 text-center font-serif text-3xl font-bold text-brand-charcoal md:text-4xl">
-          Frequently Asked Questions
-        </h2>
-        <div className="mx-auto max-w-[700px]">
-          <FAQ items={faqs} />
-        </div>
-      </Section>
-
-      {/* Calendly Placeholder */}
-      <Section>
-        <div className="text-center">
-          <h2 className="font-serif text-3xl font-bold text-brand-charcoal md:text-4xl">
-            Schedule a Discovery Call
-          </h2>
-          <p className="mt-4 text-lg text-text-secondary">
-            30 minutes. No commitment. Let&apos;s see if there&apos;s a fit.
-          </p>
-          <div className="mx-auto mt-8 flex h-[400px] max-w-[600px] items-center justify-center rounded-lg border-2 border-dashed border-brand-charcoal/20">
-            <p className="text-sm text-text-secondary">
-              Calendly booking widget will be embedded here
-            </p>
+          <div className="grid gap-6 md:grid-cols-2">
+            {services.map((service) => (
+              <ServiceCard key={service.title} {...service} />
+            ))}
           </div>
         </div>
-      </Section>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-brand-card py-24 md:py-32">
+        <div className="mx-auto max-w-[1280px] px-6">
+          <h2 className="mb-12 font-serif text-3xl font-bold text-brand-dark md:text-4xl">
+            Frequently Asked Questions
+          </h2>
+          <div className="max-w-[700px]">
+            <FAQ items={faqs} />
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-brand-bg py-20">
+        <div className="mx-auto max-w-[600px] px-6 text-center">
+          <h2 className="font-serif text-2xl font-bold text-brand-dark md:text-3xl">
+            Ready to start a conversation?
+          </h2>
+          <p className="mt-4 text-brand-gray">
+            30 minutes. No commitment. Let&apos;s see if there&apos;s a fit.
+          </p>
+          <Link
+            href="/contact"
+            className="mt-8 inline-block rounded-full bg-brand-blue px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-brand-teal"
+          >
+            Get in touch
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }

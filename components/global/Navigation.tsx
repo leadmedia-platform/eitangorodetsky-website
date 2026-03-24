@@ -21,47 +21,44 @@ export default function Navigation() {
   }, [pathname]);
 
   useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-brand-cream/95 backdrop-blur-sm border-b border-brand-charcoal/10"
+          ? "bg-brand-bg/95 backdrop-blur-md border-b border-brand-dark/8 shadow-sm"
           : "bg-transparent"
       }`}
     >
       <nav
-        className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4"
+        className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-4"
         aria-label="Main navigation"
       >
         {/* Logo */}
         <Link
           href="/"
-          className="font-serif text-lg font-bold tracking-tight text-brand-charcoal"
+          className="font-serif text-base font-bold tracking-widest text-brand-dark uppercase"
         >
           EITAN GORODETSKY
         </Link>
 
         {/* Desktop Links */}
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-7 lg:flex">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                aria-current={pathname === link.href ? "page" : undefined}
-                className={`text-[15px] font-medium transition-colors hover:text-brand-amber ${
-                  pathname === link.href
-                    ? "text-brand-amber"
-                    : "text-brand-charcoal"
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={`text-[14px] font-medium transition-colors hover:text-brand-blue ${
+                  isActive(link.href)
+                    ? "text-brand-blue border-b-2 border-brand-gold pb-0.5"
+                    : "text-brand-dark"
                 }`}
               >
                 {link.label}
@@ -70,33 +67,33 @@ export default function Navigation() {
           ))}
         </ul>
 
-        {/* Desktop Newsletter CTA */}
+        {/* Desktop CTA */}
         <Link
-          href="#newsletter"
-          className="hidden rounded-full bg-brand-amber px-5 py-2 text-sm font-medium text-brand-cream transition-colors hover:bg-brand-terracotta md:inline-block"
+          href="/contact"
+          className="hidden rounded-full bg-brand-blue px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-brand-teal lg:inline-block"
         >
-          Newsletter
+          Let&apos;s Talk
         </Link>
 
         {/* Mobile Hamburger */}
         <button
-          className="flex flex-col gap-[5px] md:hidden"
+          className="flex flex-col gap-[5px] lg:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-expanded={mobileOpen}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           <span
-            className={`block h-[2px] w-6 bg-brand-charcoal transition-transform duration-300 ${
+            className={`block h-[2px] w-6 bg-brand-dark transition-transform duration-300 ${
               mobileOpen ? "translate-y-[7px] rotate-45" : ""
             }`}
           />
           <span
-            className={`block h-[2px] w-6 bg-brand-charcoal transition-opacity duration-300 ${
+            className={`block h-[2px] w-6 bg-brand-dark transition-opacity duration-300 ${
               mobileOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`block h-[2px] w-6 bg-brand-charcoal transition-transform duration-300 ${
+            className={`block h-[2px] w-6 bg-brand-dark transition-transform duration-300 ${
               mobileOpen ? "-translate-y-[7px] -rotate-45" : ""
             }`}
           />
@@ -105,17 +102,15 @@ export default function Navigation() {
 
       {/* Mobile Menu Overlay */}
       {mobileOpen && (
-        <div className="fixed inset-0 top-0 z-40 flex flex-col items-center justify-center bg-brand-cream md:hidden">
+        <div className="fixed inset-0 top-0 z-40 flex flex-col items-center justify-center bg-brand-bg lg:hidden">
           <ul className="flex flex-col items-center gap-8">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  aria-current={pathname === link.href ? "page" : undefined}
-                  className={`font-serif text-2xl font-bold transition-colors hover:text-brand-amber ${
-                    pathname === link.href
-                      ? "text-brand-amber"
-                      : "text-brand-charcoal"
+                  aria-current={isActive(link.href) ? "page" : undefined}
+                  className={`font-serif text-2xl font-bold transition-colors hover:text-brand-blue ${
+                    isActive(link.href) ? "text-brand-blue" : "text-brand-dark"
                   }`}
                   onClick={() => setMobileOpen(false)}
                 >
@@ -125,11 +120,11 @@ export default function Navigation() {
             ))}
             <li>
               <Link
-                href="#newsletter"
-                className="mt-4 inline-block rounded-full bg-brand-amber px-8 py-3 text-base font-medium text-brand-cream transition-colors hover:bg-brand-terracotta"
+                href="/contact"
+                className="mt-4 inline-block rounded-full bg-brand-blue px-8 py-3 text-base font-medium text-white transition-colors hover:bg-brand-teal"
                 onClick={() => setMobileOpen(false)}
               >
-                Newsletter
+                Let&apos;s Talk
               </Link>
             </li>
           </ul>
