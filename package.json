@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
+    "astring": "^1.9.0",
+    "concat-map": "0.0.1",
     "@vercel/speed-insights": "^1.1.0",
     "detect-libc": "^2.1.2",
     "framer-motion": "^12.38.0",
