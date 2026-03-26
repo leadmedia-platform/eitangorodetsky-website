@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "AI in Operations & Marketing — Eitan Gorodetsky",
+  title: "AI in Operations & Marketing",
   description:
     "How AI actually changes the way businesses run — beyond the hype, into real workflow architecture.",
 };

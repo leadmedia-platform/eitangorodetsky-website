@@ -4,9 +4,9 @@ import StoriesArchive from "@/components/stories/StoriesArchive";
 import Section from "@/components/shared/Section";
 
 export const metadata: Metadata = {
-  title: "Stories — Eitan Gorodetsky | Operations Intelligence",
+  title: "Stories",
   description:
-    "Read stories about operations, margin recovery, and what dashboards hide.",
+    "Honest field notes from 15 years inside iGaming, Tech & Digital. Operations, margin recovery, leadership, and what dashboards hide.",
 };
 
 export default function StoriesPage() {

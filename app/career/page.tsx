@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Career — Eitan Gorodetsky",
+  title: "Career",
   description:
     "15 years of building what matters. From SEO specialist to C-level operator, leading €100M+ budgets across 20+ regulated markets.",
 };

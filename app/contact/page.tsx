@@ -1,16 +1,13 @@
-"use client";
+import type { Metadata } from "next";
+import ContactForm from "@/components/contact/ContactForm";
 
-import { useState } from "react";
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Get in touch with Eitan Gorodetsky. Available for Director, VP, CMO, and COO roles — plus operational consulting, collaboration, and interesting conversations.",
+};
 
 export default function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", reason: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
   return (
     <div className="pt-20">
       {/* Hero */}
@@ -40,86 +37,7 @@ export default function ContactPage() {
               <h2 className="font-serif text-2xl font-bold text-brand-dark">
                 Send a message
               </h2>
-
-              {submitted ? (
-                <div className="mt-8 rounded-xl bg-brand-card p-8">
-                  <p className="font-serif text-xl font-bold text-brand-dark">Got it.</p>
-                  <p className="mt-2 text-brand-gray">I&apos;ll be in touch soon.</p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="mt-8 space-y-5">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-brand-dark">
-                      Name
-                    </label>
-                    <input
-                      id="name"
-                      type="text"
-                      required
-                      value={form.name}
-                      onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      className="mt-1.5 w-full rounded-lg border border-brand-dark/15 bg-white px-4 py-3 text-sm focus:border-brand-blue focus:outline-none"
-                      placeholder="Your name"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-brand-dark">
-                      Email
-                    </label>
-                    <input
-                      id="email"
-                      type="email"
-                      required
-                      value={form.email}
-                      onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      className="mt-1.5 w-full rounded-lg border border-brand-dark/15 bg-white px-4 py-3 text-sm focus:border-brand-blue focus:outline-none"
-                      placeholder="you@company.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="reason" className="block text-sm font-medium text-brand-dark">
-                      What brings you here?
-                    </label>
-                    <select
-                      id="reason"
-                      required
-                      value={form.reason}
-                      onChange={(e) => setForm({ ...form, reason: e.target.value })}
-                      className="mt-1.5 w-full rounded-lg border border-brand-dark/15 bg-white px-4 py-3 text-sm focus:border-brand-blue focus:outline-none"
-                    >
-                      <option value="">Select one…</option>
-                      <option value="hiring">I&apos;m hiring / recruiting</option>
-                      <option value="consulting">I need consulting help</option>
-                      <option value="collaborate">I want to collaborate</option>
-                      <option value="hello">Just saying hello</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-brand-dark">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      required
-                      rows={5}
-                      value={form.message}
-                      onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className="mt-1.5 w-full rounded-lg border border-brand-dark/15 bg-white px-4 py-3 text-sm focus:border-brand-blue focus:outline-none resize-none"
-                      placeholder="Tell me what's on your mind…"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full rounded-full bg-brand-blue py-3.5 text-sm font-semibold text-white transition-colors hover:bg-brand-teal"
-                  >
-                    Send Message
-                  </button>
-                </form>
-              )}
+              <ContactForm />
             </div>
 
             {/* Info */}
@@ -133,7 +51,7 @@ export default function ContactPage() {
                     <p className="text-xs font-bold uppercase tracking-wider text-brand-gray">Email</p>
                     <a
                       href="mailto:eitangorodetsky@gmail.com"
-                      className="mt-1 text-brand-blue hover:underline underline-offset-4"
+                      className="mt-1 block text-brand-blue hover:underline underline-offset-4"
                     >
                       eitangorodetsky@gmail.com
                     </a>
@@ -144,7 +62,7 @@ export default function ContactPage() {
                       href="https://linkedin.com/in/socialeitan"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-1 text-brand-blue hover:underline underline-offset-4"
+                      className="mt-1 block text-brand-blue hover:underline underline-offset-4"
                     >
                       linkedin.com/in/socialeitan
                     </a>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Bodywork — Eitan Gorodetsky",
+  title: "Bodywork",
   description: "Thai yoga massage, couples treatments, and how working with bodies informs working with teams.",
 };
 

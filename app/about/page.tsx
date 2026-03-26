@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About — Eitan Gorodetsky",
+  title: "About",
   description:
     "Born in Israel. Shaped by Malta. Now building on the Central Coast of Australia. The full story of 15 years finding what's hidden.",
 };
@@ -131,16 +131,19 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Photo Gallery Placeholder */}
+      {/* Stats strip */}
       <section className="bg-brand-card py-16">
         <div className="mx-auto max-w-[1280px] px-6">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="flex aspect-[4/3] items-center justify-center rounded-xl bg-brand-dark/5"
-              >
-                <span className="text-sm text-brand-gray">Photo {i}</span>
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+            {[
+              { value: "€100M+", label: "Annual budgets managed" },
+              { value: "120",    label: "Largest team led" },
+              { value: "20+",    label: "Regulated markets" },
+              { value: "15+",    label: "Years of experience" },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <p className="font-serif text-4xl font-bold text-brand-blue">{stat.value}</p>
+                <p className="mt-2 text-sm text-brand-gray">{stat.label}</p>
               </div>
             ))}
           </div>

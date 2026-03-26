@@ -4,7 +4,7 @@ import ServiceCard from "@/components/work/ServiceCard";
 import FAQ from "@/components/work/FAQ";
 
 export const metadata: Metadata = {
-  title: "Work With Me — Eitan Gorodetsky",
+  title: "Work With Me",
   description:
     "Margin Recovery Audit, Fractional COO, Atlassian consulting, speaking. Available while primarily seeking full-time leadership roles.",
 };

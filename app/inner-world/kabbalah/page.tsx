@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Kabbalah — Eitan Gorodetsky",
+  title: "Kabbalah",
   description: "How Kabbalistic thinking shapes operational intelligence and the search for what's hidden.",
 };
 

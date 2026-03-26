@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Freediving — Eitan Gorodetsky",
+  title: "Freediving",
   description: "How freediving and breath practice shapes presence, performance under pressure, and operational clarity.",
 };
 

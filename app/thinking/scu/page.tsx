@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "The SCU Framework — Eitan Gorodetsky",
+  title: "The SCU Framework",
   description:
     "See. Clarify. Use. A three-step methodology for turning operational complexity into measurable improvement.",
 };

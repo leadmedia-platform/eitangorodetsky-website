@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Operations Intelligence Architecture — Eitan Gorodetsky",
+  title: "Operations Intelligence Architecture",
   description:
     "The OIA framework for finding what's hidden and fixing what's broken in operations.",
 };

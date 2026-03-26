@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Inner World — Eitan Gorodetsky",
+  title: "Inner World",
   description:
     "Sound healing, Kabbalah, freediving, bodywork. The practices that shape the professional. The best leaders are built from the inside out.",
 };

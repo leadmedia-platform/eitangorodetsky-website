@@ -3,9 +3,9 @@ import Section from "@/components/shared/Section";
 import Button from "@/components/shared/Button";
 
 export const metadata: Metadata = {
-  title: "Tools — Eitan Gorodetsky | Operations Intelligence",
+  title: "Tools & Resources",
   description:
-    "Operational intelligence tools, templates, and courses. Coming soon.",
+    "Practical operational intelligence tools — margin leak calculator, audit templates, and courses. Coming soon.",
 };
 
 const tools = [
@@ -67,13 +67,13 @@ export default function ToolsPage() {
       <Section>
         <div className="text-center">
           <h2 className="font-serif text-3xl font-bold text-brand-charcoal md:text-4xl">
-            Want to know when these launch?
+            Want early access?
           </h2>
           <p className="mt-4 text-lg text-text-secondary">
-            Join the newsletter and be first to access new tools.
+            Drop me a message and I&apos;ll let you know when these tools are ready.
           </p>
           <div className="mt-8">
-            <Button href="#newsletter">Join the newsletter</Button>
+            <Button href="/contact">Get in touch</Button>
           </div>
         </div>
       </Section>

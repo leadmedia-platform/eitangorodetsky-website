@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Sound Healing — Eitan Gorodetsky",
+  title: "Sound Healing",
   description: "How sound healing practice shapes operational leadership and human awareness.",
 };
 

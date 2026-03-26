@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Thinking — Eitan Gorodetsky",
+  title: "Thinking",
   description:
     "The intellectual frameworks behind 15 years of operational work. OIA, the SCU model, and AI in operations.",
 };

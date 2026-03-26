@@ -4,7 +4,6 @@ import { Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
 import Navigation from "@/components/global/Navigation";
 import Footer from "@/components/global/Footer";
 import SkipLink from "@/components/global/SkipLink";
-import NewsletterPopup from "@/components/global/NewsletterPopup";
 import Analytics from "@/components/global/Analytics";
 import SchemaOrg from "@/components/global/SchemaOrg";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -40,8 +39,19 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   metadataBase: new URL(SITE_URL),
-  keywords: ["Eitan Gorodetsky", "CMO", "COO", "Marketing Director", "VP Marketing", "Operations Executive", "iGaming", "Digital Marketing"],
+  keywords: ["Eitan Gorodetsky", "CMO", "COO", "Marketing Director", "VP Marketing", "Operations Executive", "iGaming", "Digital Marketing", "Fractional COO", "Australia"],
   authors: [{ name: "Eitan Gorodetsky", url: SITE_URL }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
@@ -49,13 +59,15 @@ export const metadata: Metadata = {
     siteName: "Eitan Gorodetsky",
     locale: "en_US",
     type: "website",
-    images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: SITE_TITLE }],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: [`${SITE_URL}/og-image.png`],
+    creator: "@eitangorodetsky",
+  },
+  alternates: {
+    canonical: SITE_URL,
   },
 };
 
@@ -82,7 +94,6 @@ export default function RootLayout({
         <Navigation />
         <main id="main-content">{children}</main>
         <Footer />
-        <NewsletterPopup />
         <Analytics />
         <SpeedInsights />
       </body>
