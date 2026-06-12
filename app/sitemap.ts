@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getStorySlugs } from "@/lib/stories";
+import { getEssaySlugs } from "@/lib/essays";
 import { SITE_URL } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -13,6 +14,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Stories
     { url: `${SITE_URL}/stories`,                     lastModified: new Date(), changeFrequency: "daily",   priority: 0.9 },
+
+    // Writing (essays)
+    { url: `${SITE_URL}/writing`,                     lastModified: new Date(), changeFrequency: "weekly",  priority: 0.9 },
 
     // Thinking section
     { url: `${SITE_URL}/thinking`,                    lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
@@ -41,5 +45,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...storyPages];
+  const essaySlugs = getEssaySlugs();
+  const essayPages: MetadataRoute.Sitemap = essaySlugs.map((slug) => ({
+    url: `${SITE_URL}/writing/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+
+  return [...staticPages, ...storyPages, ...essayPages];
 }

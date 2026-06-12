@@ -1,5 +1,5 @@
 import { SITE_URL, SITE_NAME } from "./constants";
-import type { StoryFrontmatter } from "./types";
+import type { StoryFrontmatter, EssayFrontmatter } from "./types";
 
 export function getPersonSchema() {
   return {
@@ -49,6 +49,35 @@ export function getArticleSchema(
     },
     datePublished: frontmatter.date,
     url: `${SITE_URL}/stories/${slug}`,
+  };
+}
+
+export function getEssayArticleSchema(
+  slug: string,
+  frontmatter: EssayFrontmatter
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: frontmatter.title,
+    description: frontmatter.excerpt,
+    author: {
+      "@type": "Person",
+      name: frontmatter.author || SITE_NAME,
+      url: SITE_URL,
+      sameAs: [
+        "https://linkedin.com/in/socialeitan",
+        "https://twitter.com/eitangorodetsky",
+      ],
+    },
+    publisher: {
+      "@type": "Person",
+      name: SITE_NAME,
+    },
+    datePublished: frontmatter.date,
+    dateModified: frontmatter.date,
+    url: `${SITE_URL}/writing/${slug}`,
+    mainEntityOfPage: `${SITE_URL}/writing/${slug}`,
   };
 }
 

@@ -6,6 +6,7 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://eitangorode
 
 export const NAV_LINKS = [
   { label: "Career",      href: "/career" },
+  { label: "Writing",     href: "/writing" },
   { label: "Thinking",    href: "/thinking" },
   { label: "Stories",     href: "/stories" },
   { label: "Inner World", href: "/inner-world" },
@@ -23,6 +24,7 @@ export const SOCIAL_LINKS = [
 export const FOOTER_NAV_LINKS = [
   { label: "Home",        href: "/" },
   { label: "Career",      href: "/career" },
+  { label: "Writing",     href: "/writing" },
   { label: "Thinking",    href: "/thinking" },
   { label: "Stories",     href: "/stories" },
   { label: "Inner World", href: "/inner-world" },
