@@ -1,0 +1,82 @@
+---
+title: "AI governance that speeds you up — govern the blast radius, not the intelligence"
+dek: "Governance is sold as the brake on AI. Designed right, it's the accelerator — the thing that lets you safely say yes to autonomy. Here's the model, and why the 2025 data backs it."
+date: "2026-06-14"
+readTime: "8 min"
+excerpt: "Governance is sold as the brake on AI. Designed into the architecture as controls on the blast radius — not restrictions on what the AI can think — it becomes the accelerator that lets you safely grant more autonomy."
+author: "Eitan Gorodetsky"
+pillar: "Governance & responsible adoption"
+framework: "Govern the blast radius, not the intelligence"
+---
+
+Most marketing leaders have been taught to treat AI governance as the brake — the compliance tax you pay to slow down the risky thing. That framing is backwards, and the 2025 data now says so. EY's survey this year found AI adoption is outpacing governance while C-suite risk awareness stays low — and that only 28% of companies have their CEO directly overseeing AI governance, with those that do reporting *meaningfully higher* bottom-line impact. Governance isn't what slows AI down. The absence of it is what gets AI blocked.
+
+I run an AI-native operation where unsupervised systems do real work — research, monitoring, drafting — on a schedule, without me watching. That's only possible because of one design decision, and it's the whole model in a sentence: **govern the blast radius, not the intelligence.**
+
+You don't make AI safe by restricting what it's allowed to *think*. You make it safe by controlling what it's allowed to *touch*. Get that right and you can let the intelligence run — because the worst thing it can do is bounded by design.
+
+## The model: five controls on the blast radius
+
+**1. Least-privilege hands.** The AI reads broadly and writes narrowly. It can see the analytics, the CRM, the content store; it can write only to the specific places its job requires, through scoped, permissioned integrations. Read access is cheap; write access is earned per task. Most "AI risk" is really unscoped write access wearing a costume.
+
+**2. Gated promotion.** Anything the AI does unsupervised writes only to a staging surface. Nothing it produces touches the live system until a human reviews and promotes it. The autonomy is real; the blast radius of a bad run is a discarded draft. (This is the pattern behind "it runs while you sleep" — I went deeper on it [in the AI-native operation piece](/writing/ai-native-marketing-operation).)
+
+**3. Provenance and audit.** Every AI action is logged and attributable — what it did, when, on what input, under whose workflow. If you can't reconstruct and reverse an AI decision, you don't have governance, you have hope. An audit trail is what turns "the AI did something weird" into a two-minute review instead of a forensics project.
+
+**4. Explicit data boundaries.** What the AI may see and use is stated, not assumed. Customer PII, client-confidential data, and brand-restricted material each get a boundary, and contexts are firewalled so data from one engagement can't bleed into another. This is where GDPR, SOC 2, and the EU AI Act stop being abstract and become configuration.
+
+**5. Named human accountability.** Every AI workflow has a human who owns its output. "The AI did it" is not an answer a board accepts. Accountability sitting with a named person is what makes the other four controls real rather than decorative.
+
+## Why this is the accelerator, not the brake
+
+Here's the part that surprises people: once the blast radius is governed, you can say *yes* far more often. The reason most enterprise AI stays stuck at "draft and wait for a human" isn't caution for its own sake — it's that nobody built the controls that would make more autonomy safe. So everything routes through a human bottleneck, and the AI never gets to compound. (That bottleneck is exactly where the ROI leaks — [the difference between AI that compounds and AI that's theatre](/writing/where-ai-moves-roi).)
+
+The data backs the inversion. EY's 2025 read is that the firms whose CEOs actually own AI governance see *higher* bottom-line impact — governance correlating with performance, not dragging on it. And roughly 98% of enterprises plan to raise governance budgets next year, by an average of about 24%. The money is moving because leaders have worked out that the controls are what unlock the value, not what fence it off.
+
+Governance done as a checklist after the fact is a brake. Governance designed into the architecture up front is the thing that lets you take your hands off the wheel.
+
+## What actually gets AI blocked — and how the model clears it
+
+The things that kill AI initiatives in enterprises are predictable: brand safety, data and compliance exposure, customer-facing risk, and a board that can't see how the risk is held. Each maps to a control:
+
+- **Brand safety** → gated promotion: nothing customer-facing ships unreviewed.
+- **Data and compliance** → explicit data boundaries: the AI can't touch what it isn't scoped to.
+- **Customer-facing risk** → least-privilege hands: the AI can't act outside its lane.
+- **Board accountability** → provenance plus named ownership: the risk is legible and owned.
+
+Solve the fear structurally and the deal — internal buy-in or external sale — stops stalling.
+
+## What this means if you lead a marketing team
+
+**Stop writing AI policies; start designing AI controls.** A policy document is a statement of intent. A blast-radius control is enforced by the system whether anyone reads the policy or not. Governance that lives only in a PDF doesn't govern anything.
+
+**Make autonomy a function of controls, not nerve.** Don't set how much AI can do by how brave you feel this quarter. Set it by how well-bounded the blast radius is, and expand the autonomy deliberately as the controls get stronger.
+
+**Put a name on every AI workflow.** The fastest way to make AI governance real is to assign a human owner to each automated output. It's free, it's immediate, and it's the line between governance and theatre.
+
+Framed right, governance isn't the thing that holds AI back. It's the thing that lets a marketing function move faster than its competitors can safely follow.
+
+## Questions marketing leaders ask
+
+**Doesn't AI governance just slow everything down?**
+Only when it's bolted on as after-the-fact review. Designed into the architecture as controls on the blast radius, it does the opposite — it lets you safely grant more autonomy, which is where the speed comes from. EY's 2025 data shows the firms whose leadership owns AI governance see higher bottom-line impact, not lower.
+
+**What's the minimum viable AI governance for a marketing team?**
+Three things: scoped write access (the AI can only change what its job needs), gated promotion (unsupervised work lands in staging for human sign-off), and a named owner per workflow. Those cover most of the real risk and take days, not quarters, to stand up.
+
+**How do we let AI act autonomously without a compliance incident?**
+Govern what it can touch, not what it can think. Autonomous work writes only to a staging surface; a human promotes it to anything live or customer-facing. The worst case of an unsupervised run becomes a discarded draft instead of a published mistake.
+
+**Who should own AI governance in the organisation?**
+Ideally leadership — EY found only 28% of companies have the CEO directly overseeing it, and those that do report stronger results. For a marketing function, a named owner per AI workflow plus exec-level accountability for the whole beats a standalone "AI committee" that owns nothing concrete.
+
+**How does this handle GDPR, the EU AI Act, and data privacy?**
+Through explicit data boundaries: the AI's access to PII, client-confidential, and brand-restricted data is stated and enforced in configuration, and contexts are firewalled so data can't leak between engagements. Compliance stops being a policy aspiration and becomes a permission setting.
+
+---
+
+*I run an AI-native operation with autonomous systems doing real work safely, and write about the architecture that makes that responsible rather than reckless. If you're trying to let AI move faster without losing control of it, that's the conversation I'm here for.*
+
+---
+
+*Sources: EY, 2025 Responsible AI / AI-governance survey (AI adoption outpacing governance; 28% of companies have direct CEO oversight; higher bottom-line impact where leadership owns governance), reported August 2025; enterprise AI-governance budget figures (~98% increasing budgets, ~24% average rise), 2025 industry surveys.*
