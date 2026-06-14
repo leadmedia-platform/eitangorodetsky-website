@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/home/HeroSection";
 import CareerHighlights from "@/components/home/CareerHighlights";
-import FeaturedStories from "@/components/home/FeaturedStories";
+import FeaturedWriting from "@/components/home/FeaturedWriting";
 import WhatIDo from "@/components/home/WhatIDo";
 import ProofBar from "@/components/home/ProofBar";
 import SocialProof from "@/components/home/SocialProof";
@@ -21,7 +21,7 @@ export default function Home() {
       <HeroSection />
       <CareerHighlights />
       <WhatIDo />
-      <FeaturedStories />
+      <FeaturedWriting />
       <ProofBar />
       <SocialProof />
     </>

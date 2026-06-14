@@ -5,7 +5,6 @@ const navigate = [
   { label: "Home",         href: "/" },
   { label: "Career",       href: "/career" },
   { label: "Thinking",     href: "/thinking" },
-  { label: "Stories",      href: "/stories" },
   { label: "Inner World",  href: "/inner-world" },
   { label: "About",        href: "/about" },
   { label: "Contact",      href: "/contact" },

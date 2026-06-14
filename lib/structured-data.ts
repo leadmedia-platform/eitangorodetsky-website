@@ -1,5 +1,5 @@
 import { SITE_URL, SITE_NAME } from "./constants";
-import type { StoryFrontmatter, EssayFrontmatter } from "./types";
+import type { EssayFrontmatter } from "./types";
 
 export function getPersonSchema() {
   return {
@@ -31,24 +31,6 @@ export function getOrganizationSchema() {
     url: SITE_URL,
     description:
       "Senior Marketing & Operations Leader — building growth systems, leading people, finding what's hidden.",
-  };
-}
-
-export function getArticleSchema(
-  slug: string,
-  frontmatter: StoryFrontmatter
-) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: frontmatter.title,
-    description: frontmatter.excerpt,
-    author: {
-      "@type": "Person",
-      name: frontmatter.author || SITE_NAME,
-    },
-    datePublished: frontmatter.date,
-    url: `${SITE_URL}/stories/${slug}`,
   };
 }
 

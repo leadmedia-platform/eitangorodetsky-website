@@ -104,7 +104,7 @@ export default async function EssayPage({ params }: EssayPageProps) {
             Eitan Gorodetsky
           </p>
           <p className="mt-1 text-sm text-brand-gray">
-            I run Lead Media as an AI-native marketing operation, and write about
+            I run an AI-native marketing operation, and write about
             what it takes to operate this way.{" "}
             <Link
               href="/about"

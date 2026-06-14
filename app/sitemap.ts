@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { getStorySlugs } from "@/lib/stories";
 import { getEssaySlugs } from "@/lib/essays";
 import { SITE_URL } from "@/lib/constants";
 
@@ -11,9 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/career`,                      lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE_URL}/work-with-me`,                lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${SITE_URL}/contact`,                     lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-
-    // Stories
-    { url: `${SITE_URL}/stories`,                     lastModified: new Date(), changeFrequency: "daily",   priority: 0.9 },
 
     // Writing (essays)
     { url: `${SITE_URL}/writing`,                     lastModified: new Date(), changeFrequency: "weekly",  priority: 0.9 },
@@ -37,14 +33,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/terms`,                       lastModified: new Date(), changeFrequency: "yearly",  priority: 0.2 },
   ];
 
-  const storySlugs = getStorySlugs();
-  const storyPages: MetadataRoute.Sitemap = storySlugs.map((slug) => ({
-    url: `${SITE_URL}/stories/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.7,
-  }));
-
   const essaySlugs = getEssaySlugs();
   const essayPages: MetadataRoute.Sitemap = essaySlugs.map((slug) => ({
     url: `${SITE_URL}/writing/${slug}`,
@@ -53,5 +41,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticPages, ...storyPages, ...essayPages];
+  return [...staticPages, ...essayPages];
 }
