@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 const timeline = [
   {
     years: "2026",
-    role: "Fractional COO",
-    company: "iGaming Managed Services (IGMS)",
+    role: "Building an AI-native operation",
+    company: "Independent",
     location: "Central Coast, Australia",
     description:
-      "Setting up and running operations for Sweepstakes Casino and Crypto Casino ventures. Built full operational systems in Jira/Confluence from scratch. CS workflows, compliance tracking, escalation procedures, performance reporting.",
+      "Building and running a multi-pillar operation — agency work, owned ventures, products — largely solo, on the AI layer. Persistent memory, live integrations, codified workflows, and gated autonomy underneath. Writing about what it takes, in the open.",
   },
   {
     years: "2025",
@@ -22,7 +22,7 @@ const timeline = [
     company: "Global",
     location: "Worldwide",
     description:
-      "Intentional year for travel, personal development, and going deep on AI. Built AgentReady.site to learn AI agent architecture hands-on. Explored applied AI in operations and marketing contexts.",
+      "Intentional year for travel, personal development, and going deep on AI. Built an AI-agent product from scratch to learn the architecture hands-on. Explored applied AI in operations and marketing contexts.",
   },
   {
     years: "2023–2024",
@@ -160,37 +160,39 @@ export default function CareerPage() {
         </div>
       </section>
 
-      {/* Availability */}
+      {/* Now / work together */}
       <section className="bg-brand-card py-16 md:py-20">
         <div className="mx-auto max-w-[1280px] px-6">
           <div className="md:flex md:items-start md:justify-between md:gap-12">
-            <div className="max-w-[500px]">
+            <div className="max-w-[520px]">
               <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-brand-teal">
-                Availability
+                Now
               </p>
               <h2 className="font-serif text-2xl font-bold text-brand-dark md:text-3xl">
-                Currently open to new opportunities
+                Building an AI-native operation, in the open
               </h2>
               <div className="mt-6 space-y-3 text-sm text-brand-gray">
-                <p><span className="font-semibold text-brand-dark">Roles:</span> Director / VP / CMO / COO</p>
-                <p><span className="font-semibold text-brand-dark">Location:</span> Remote, hybrid, or on-site (Central Coast / Sydney / anywhere in Australia)</p>
-                <p><span className="font-semibold text-brand-dark">Work rights:</span> Valid Australian working visa</p>
-                <p><span className="font-semibold text-brand-dark">Also available for:</span> Fractional leadership and consulting engagements</p>
+                <p>
+                  Fifteen years of finding what&apos;s hidden, pointed at the thing I think matters most now: building businesses that actually run on AI, not just use it.
+                </p>
+                <p>
+                  I take on a small number of margin audits, fractional operational engagements, and talks. For that — or just to compare notes — get in touch.
+                </p>
               </div>
             </div>
             <div className="mt-10 md:mt-0 flex flex-col gap-4">
               <Link
-                href="/contact"
+                href="/work-with-me"
                 className="inline-block rounded-full bg-brand-blue px-8 py-3.5 text-center text-sm font-semibold text-white transition-colors hover:bg-brand-teal"
               >
-                Get in touch
+                Work with me
               </Link>
-              <a
-                href="/Eitan_Gorodetsky_CV.pdf"
+              <Link
+                href="/writing"
                 className="inline-block rounded-full border border-brand-dark/20 px-8 py-3.5 text-center text-sm font-semibold text-brand-dark transition-colors hover:border-brand-blue hover:text-brand-blue"
               >
-                Download CV (PDF)
-              </a>
+                Read the writing
+              </Link>
             </div>
           </div>
         </div>

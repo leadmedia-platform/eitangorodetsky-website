@@ -5,6 +5,7 @@ import Link from "next/link";
 import { getEssayBySlug, getEssaySlugs, getAllEssays } from "@/lib/essays";
 import { mdxComponents } from "@/components/mdx/MDXComponents";
 import SchemaOrg from "@/components/global/SchemaOrg";
+import NewsletterCTA from "@/components/NewsletterCTA";
 import { getEssayArticleSchema, getBreadcrumbSchema } from "@/lib/structured-data";
 import { SITE_URL } from "@/lib/constants";
 import type { EssayFrontmatter } from "@/lib/types";
@@ -114,6 +115,9 @@ export default async function EssayPage({ params }: EssayPageProps) {
             </Link>
           </p>
         </div>
+
+        {/* Newsletter capture — highest-intent moment, just after the read */}
+        <NewsletterCTA source={`essay:${slug}`} compact />
 
         {/* Prev / next */}
         {(prevEssay || nextEssay) && (

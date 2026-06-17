@@ -90,8 +90,8 @@ export default function ContactForm() {
           className="mt-1.5 w-full rounded-lg border border-brand-dark/15 bg-white px-4 py-3 text-sm focus:border-brand-blue focus:outline-none disabled:opacity-60"
         >
           <option value="">Select one…</option>
-          <option value="hiring">I&apos;m hiring / recruiting</option>
-          <option value="consulting">I need consulting help</option>
+          <option value="advisory">Advisory / consulting</option>
+          <option value="speaking">Speaking / podcast</option>
           <option value="collaborate">I want to collaborate</option>
           <option value="hello">Just saying hello</option>
         </select>

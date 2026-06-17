@@ -48,13 +48,13 @@ const timeline = [
     year: "2025",
     title: "The intentional year",
     description:
-      "Travelled. Went deep on AI. Built AgentReady.site from scratch to understand AI agent architecture. Surfed. Read. Thought. This is how I do transitions.",
+      "Travelled. Went deep on AI. Built an AI-agent product from scratch to understand the architecture from the inside. Surfed. Read. Thought. This is how I do transitions.",
   },
   {
     year: "2026",
     title: "Australia and what's next",
     description:
-      "Central Coast. Ocean. Clarity. Fractional COO at IGMS, building operational systems for new ventures. Looking for the right full-time opportunity. Building something meaningful.",
+      "Central Coast. Ocean. Clarity. Building and running an AI-native operation — agency work, owned ventures, products — and writing about what it takes, in the open.",
   },
 ];
 
@@ -122,10 +122,10 @@ export default function AboutPage() {
               TonyBet gave me six new markets in two years: Ireland, Canada, Netherlands, Spain, Latvia, Estonia. TV campaigns. Sponsorships. Performance marketing at full tilt. By this point I&apos;d built enough of a framework that launching a market felt like something I could do in my sleep. Which meant it was time to learn something new.
             </p>
             <p>
-              2025 was intentional. I travelled. I went deep on AI — not reading about it, building with it. AgentReady.site is what that looks like. I surfed. I read. I thought about what the next chapter should look like.
+              2025 was intentional. I travelled. I went deep on AI — not reading about it, building with it. I built an AI product from scratch, just to understand the architecture from the inside. I surfed. I read. I thought about what the next chapter should look like.
             </p>
             <p>
-              The answer was Australia. Central Coast. Ocean. Clarity. I&apos;m currently Fractional COO at IGMS, building operational infrastructure for new ventures from scratch. And I&apos;m looking for the right full-time opportunity — a Director, VP, CMO, or COO role where I can do the work I do best.
+              The answer was Australia. Central Coast. Ocean. Clarity. Now I build and run an AI-native marketing operation — agency work, owned ventures, products — largely on my own, on the AI layer. And I write about what it actually takes, in the open. Fifteen years of finding what&apos;s hidden, pointed at the thing I think matters most now: building businesses that actually run on AI, not just use it.
             </p>
           </div>
         </div>
@@ -217,7 +217,7 @@ export default function AboutPage() {
             Want to have an interesting conversation?
           </h2>
           <p className="mt-4 text-base text-brand-gray">
-            Whether you&apos;re hiring, need operational consulting, or just want to talk — I&apos;m easy to reach.
+            Whether you want to talk about building an AI-native operation, compare notes, or just say hello — I&apos;m easy to reach.
           </p>
           <Link
             href="/contact"

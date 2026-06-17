@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   metadataBase: new URL(SITE_URL),
   verification: { google: "ixcUWOS4mgQdgw0e7-qg5RXSXZ5Xu9_CWmrZTvBF_eU" },
-  keywords: ["Eitan Gorodetsky", "CMO", "COO", "Marketing Director", "VP Marketing", "Operations Executive", "iGaming", "Digital Marketing", "Fractional COO", "Australia"],
+  keywords: ["Eitan Gorodetsky", "AI-native marketing", "AI-native operations", "operational intelligence", "AI governance", "marketing operations", "margin recovery", "fractional COO", "iGaming", "Australia"],
   authors: [{ name: "Eitan Gorodetsky", url: SITE_URL }],
   robots: {
     index: true,

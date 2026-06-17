@@ -10,14 +10,16 @@ export default function PrivacyPage() {
   return (
     <section className="mx-auto max-w-[720px] px-6 py-24">
       <h1 className="font-serif text-4xl font-bold text-brand-charcoal">Privacy Policy</h1>
-      <p className="mt-2 text-sm text-text-secondary">Last updated: March 2026</p>
+      <p className="mt-2 text-sm text-text-secondary">Last updated: June 2026</p>
 
       <div className="prose prose-neutral mt-10 max-w-none">
         <h2>What I collect</h2>
         <p>
           When you subscribe to the newsletter, I collect your email address. That&apos;s it. I don&apos;t
-          use tracking pixels, sell data, or share your information with third parties beyond
-          the email service provider used to send the newsletter.
+          use tracking pixels or sell data. Subscriptions use double opt-in — you confirm by email
+          before anything is sent. Your email is stored on Supabase (database hosting) and delivered
+          through Resend (email service); these are the only third parties that process it, and only
+          to operate the newsletter.
         </p>
 
         <h2>How I use it</h2>

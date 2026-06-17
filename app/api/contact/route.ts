@@ -9,8 +9,8 @@ export async function POST(req: NextRequest) {
     }
 
     const reasonLabels: Record<string, string> = {
-      hiring: "Hiring / Recruiting",
-      consulting: "Consulting",
+      advisory: "Advisory / Consulting",
+      speaking: "Speaking / Podcast",
       collaborate: "Collaboration",
       hello: "Just saying hello",
     };

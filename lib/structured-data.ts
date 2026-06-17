@@ -6,9 +6,9 @@ export function getPersonSchema() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: SITE_NAME,
-    jobTitle: "Senior Marketing & Operations Executive",
+    jobTitle: "AI-native marketing operator",
     description:
-      "15+ years building growth engines, leading people, and finding what's hidden across iGaming, Tech & Digital.",
+      "Builds and runs an AI-native marketing operation and writes about what it takes — memory, integration, codified workflows, governance. 15+ years across iGaming, tech, and digital.",
     url: SITE_URL,
     sameAs: [
       "https://linkedin.com/in/socialeitan",
@@ -30,7 +30,7 @@ export function getOrganizationSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     description:
-      "Senior Marketing & Operations Leader — building growth systems, leading people, finding what's hidden.",
+      "AI-native marketing operator — building businesses that run on AI, and writing about what it takes.",
   };
 }
 

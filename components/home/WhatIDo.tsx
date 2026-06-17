@@ -1,15 +1,15 @@
 const pillars = [
   {
     title: "Build",
-    body: "Growth engines that scale — from SEO to TV campaigns to AI-powered systems.",
+    body: "AI-native systems that run the business: persistent memory, live integration, codified workflows, and gated autonomy.",
   },
   {
-    title: "Lead",
-    body: "Multicultural teams from 10 to 120. Coaching leaders is what I care about most.",
+    title: "Operate",
+    body: "A multi-pillar operation — agency work, owned ventures, products — run largely solo, on the AI layer.",
   },
   {
     title: "Find",
-    body: "The hidden costs, broken processes, and quiet inefficiencies that dashboards miss.",
+    body: "The hidden costs and quiet inefficiencies the dashboards miss. Still the through-line.",
   },
 ];
 

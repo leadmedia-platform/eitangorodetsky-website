@@ -6,7 +6,7 @@ import FAQ from "@/components/work/FAQ";
 export const metadata: Metadata = {
   title: "Work With Me",
   description:
-    "Margin Recovery Audit, Fractional COO, Atlassian consulting, speaking. Available while primarily seeking full-time leadership roles.",
+    "Margin Recovery Audit, Fractional COO, Atlassian consulting, speaking. How I work with founders and operators.",
 };
 
 const services = [
@@ -95,14 +95,8 @@ export default function WorkWithMePage() {
             Work With Me
           </h1>
           <p className="mt-6 max-w-[560px] text-lg text-white/75">
-            While I&apos;m primarily looking for a full-time leadership role, I&apos;m available for consulting engagements in these areas.
+            Four ways I work with founders and operators — from a fixed-scope margin audit to fractional operational leadership.
           </p>
-          <Link
-            href="/career"
-            className="mt-6 inline-block text-sm text-white/60 hover:text-white underline-offset-4 hover:underline"
-          >
-            Looking to hire? View my career →
-          </Link>
         </div>
       </section>
 

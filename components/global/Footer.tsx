@@ -3,6 +3,7 @@ import { SOCIAL_LINKS, SITE_NAME } from "@/lib/constants";
 
 const navigate = [
   { label: "Home",         href: "/" },
+  { label: "Writing",      href: "/writing" },
   { label: "Career",       href: "/career" },
   { label: "Thinking",     href: "/thinking" },
   { label: "Inner World",  href: "/inner-world" },
@@ -26,7 +27,7 @@ export default function Footer() {
             {SITE_NAME}
           </Link>
           <p className="mt-3 text-sm leading-relaxed text-brand-gray">
-            Senior Marketing & Operations Executive.
+            AI-native marketing operator.
             <br />
             Central Coast, Australia.
           </p>
@@ -115,7 +116,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-brand-dark/8 px-6 py-4">
         <p className="mx-auto max-w-[1280px] text-center font-mono text-xs text-brand-gray">
-          Senior Marketing & Operations Leader — Building growth engines, leading people, finding what&apos;s hidden.
+          AI-native marketing operator — building businesses that run on AI, and writing about what it takes.
         </p>
       </div>
     </footer>

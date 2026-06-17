@@ -15,7 +15,7 @@ export default function FeaturedWriting() {
               Latest Writing
             </p>
             <h2 className="font-serif text-3xl font-bold text-brand-dark md:text-4xl">
-              Notes from running an AI-native operation.
+              Essays on running an AI-native operation.
             </h2>
           </div>
           <Link

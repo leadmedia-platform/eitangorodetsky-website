@@ -24,7 +24,7 @@ export default function HeroSection() {
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6 pb-20 pt-40 md:pb-28">
         <div className="max-w-[720px]">
           <p className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-white/60">
-            Senior Marketing &amp; Operations Executive
+            AI-native marketing operator
           </p>
 
           <h1 className="font-serif text-5xl font-bold leading-[1.1] text-white md:text-6xl lg:text-7xl">
@@ -34,25 +34,25 @@ export default function HeroSection() {
           </h1>
 
           <p className="mt-6 text-xl font-light leading-relaxed text-white/85 md:text-2xl">
-            I build growth engines, lead people, and find what&apos;s hidden.
+            I run an AI-native marketing operation — and I write about what it actually takes to build one.
           </p>
 
           <p className="mt-3 text-base text-white/60 md:text-lg">
-            15 years across iGaming, Tech &amp; Digital — €100M+ budgets, 20+ markets, teams of 120.
+            15 years inside iGaming, tech and digital — €100M+ budgets, 20+ markets, teams of 120. Now building in the open.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
-              href="/career"
+              href="/writing"
               className="rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-brand-dark transition-all hover:bg-brand-gold hover:text-brand-dark"
             >
-              View My Career
+              Read the essays
             </Link>
             <Link
-              href="/thinking"
+              href="#newsletter"
               className="rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"
             >
-              Read My Thinking
+              Subscribe
             </Link>
           </div>
         </div>
