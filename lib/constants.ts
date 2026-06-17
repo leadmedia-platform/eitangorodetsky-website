@@ -6,6 +6,7 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.eitango
 
 export const NAV_LINKS = [
   { label: "Writing",     href: "/writing" },
+  { label: "Building",    href: "/building" },
   { label: "Services",    href: "/work-with-me" },
   { label: "Thinking",    href: "/thinking" },
   { label: "Inner World", href: "/inner-world" },
