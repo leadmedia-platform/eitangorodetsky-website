@@ -57,6 +57,7 @@ export default async function EssayPage({ params }: EssayPageProps) {
   });
 
   const fm = essay.frontmatter;
+  const wordCount = essay.content.trim().split(/\s+/).filter(Boolean).length;
   const allEssays = getAllEssays();
   const currentIndex = allEssays.findIndex((e) => e.slug === slug);
   const prevEssay =
@@ -66,7 +67,7 @@ export default async function EssayPage({ params }: EssayPageProps) {
 
   return (
     <div className="pt-24 pb-16">
-      <SchemaOrg data={getEssayArticleSchema(slug, fm)} />
+      <SchemaOrg data={getEssayArticleSchema(slug, fm, wordCount)} />
       <SchemaOrg
         data={getBreadcrumbSchema([
           { name: "Home", url: SITE_URL },

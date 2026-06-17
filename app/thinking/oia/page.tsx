@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SchemaOrg from "@/components/global/SchemaOrg";
+import { getFrameworkSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Operations Intelligence Architecture",
@@ -61,6 +63,15 @@ const auditPhases = [
 export default function OIAPage() {
   return (
     <div className="pt-20">
+      {getFrameworkSchema({
+        name: "Operations Intelligence Architecture",
+        description:
+          "The OIA framework for finding what's hidden and fixing what's broken in operations.",
+        path: "/thinking/oia",
+        termCode: "OIA",
+      }).map((d, i) => (
+        <SchemaOrg key={i} data={d} />
+      ))}
       {/* Hero */}
       <section
         className="py-24 md:py-32"

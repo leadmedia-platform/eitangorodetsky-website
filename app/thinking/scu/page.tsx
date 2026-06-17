@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SchemaOrg from "@/components/global/SchemaOrg";
+import { getFrameworkSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "The SCU Framework",
@@ -40,6 +42,15 @@ const steps = [
 export default function SCUPage() {
   return (
     <div className="pt-20">
+      {getFrameworkSchema({
+        name: "The SCU Framework",
+        description:
+          "See. Clarify. Use. A three-step methodology for turning operational complexity into measurable improvement.",
+        path: "/thinking/scu",
+        termCode: "SCU",
+      }).map((d, i) => (
+        <SchemaOrg key={i} data={d} />
+      ))}
       {/* Hero */}
       <section
         className="py-24 md:py-32"
