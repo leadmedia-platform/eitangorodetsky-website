@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SOCIAL_LINKS, SITE_NAME } from "@/lib/constants";
+import Monogram from "@/components/global/Monogram";
 
 const navigate = [
   { label: "Home",         href: "/" },
@@ -22,9 +23,13 @@ export default function Footer() {
         <div className="lg:col-span-1">
           <Link
             href="/"
-            className="font-serif text-base font-bold tracking-widest text-brand-dark uppercase"
+            className="flex items-center gap-2.5 text-brand-dark"
+            aria-label="Eitan Gorodetsky — home"
           >
-            {SITE_NAME}
+            <Monogram size={28} />
+            <span className="font-serif text-base font-bold tracking-widest uppercase">
+              {SITE_NAME}
+            </span>
           </Link>
           <p className="mt-3 text-sm leading-relaxed text-brand-gray">
             AI-native marketing operator.
