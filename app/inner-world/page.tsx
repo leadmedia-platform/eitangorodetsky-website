@@ -43,13 +43,23 @@ export default function InnerWorldPage() {
     <div className="pt-20">
       {/* Hero */}
       <section
-        className="py-24 md:py-32"
+        className="relative overflow-hidden py-24 md:py-32"
         style={{
           background: "linear-gradient(135deg, #1a3a2e 0%, #2D8B6F 100%)",
         }}
       >
-        <div className="mx-auto max-w-[1280px] px-6">
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-white/60">
+        {/* warm gold glow — Inner World mode */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(55% 75% at 82% 18%, rgba(212,168,83,0.24), transparent 70%)",
+          }}
+        />
+        <div className="relative mx-auto max-w-[1280px] px-6">
+          <span aria-hidden className="mb-4 block h-px w-10 bg-brand-gold/70" />
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-white/70">
             Inner World
           </p>
           <h1 className="font-serif text-4xl font-bold text-white md:text-5xl">
@@ -69,22 +79,22 @@ export default function InnerWorldPage() {
               <Link
                 key={p.href}
                 href={p.href}
-                className="group block overflow-hidden rounded-2xl bg-brand-card p-8 transition-shadow hover:shadow-lg"
+                className="group block overflow-hidden rounded-3xl bg-brand-card p-8 transition-shadow hover:shadow-lg"
               >
                 <div
-                  className="h-1 w-12 rounded-full mb-6"
+                  className="h-1.5 w-16 rounded-full mb-6"
                   style={{ backgroundColor: p.accent }}
                 />
                 <p className="text-xs font-bold uppercase tracking-wider text-brand-gray">
                   {p.subtitle}
                 </p>
-                <h2 className="mt-2 font-serif text-2xl font-bold text-brand-dark group-hover:text-brand-blue transition-colors">
+                <h2 className="mt-2 font-serif text-2xl font-bold text-brand-dark group-hover:text-brand-teal transition-colors">
                   {p.title}
                 </h2>
                 <p className="mt-4 text-sm leading-relaxed text-brand-gray">
                   {p.body}
                 </p>
-                <span className="mt-6 inline-block text-sm font-semibold text-brand-blue underline-offset-4 group-hover:underline">
+                <span className="mt-6 inline-block text-sm font-semibold text-brand-teal underline-offset-4 group-hover:underline">
                   Read more →
                 </span>
               </Link>
