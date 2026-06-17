@@ -2,7 +2,7 @@ export const SITE_NAME = "Eitan Gorodetsky";
 export const SITE_TITLE = "Eitan Gorodetsky — AI-native marketing operator";
 export const SITE_DESCRIPTION =
   "I run an AI-native marketing operation and write about what it takes to build one — memory, integration, codified workflows, and governance. 15 years in iGaming, tech and digital.";
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://eitangorodetsky.com";
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.eitangorodetsky.com";
 
 export const NAV_LINKS = [
   { label: "Writing",     href: "/writing" },

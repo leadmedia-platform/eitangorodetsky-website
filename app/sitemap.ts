@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getEssaySlugs } from "@/lib/essays";
+import { getAllEssays } from "@/lib/essays";
 import { SITE_URL } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -33,11 +33,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/terms`,                       lastModified: new Date(), changeFrequency: "yearly",  priority: 0.2 },
   ];
 
-  const essaySlugs = getEssaySlugs();
-  const essayPages: MetadataRoute.Sitemap = essaySlugs.map((slug) => ({
-    url: `${SITE_URL}/writing/${slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
+  const essayPages: MetadataRoute.Sitemap = getAllEssays().map((essay) => ({
+    url: `${SITE_URL}/writing/${essay.slug}`,
+    lastModified: new Date(essay.frontmatter.date),
+    changeFrequency: "monthly",
     priority: 0.8,
   }));
 

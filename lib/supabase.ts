@@ -93,3 +93,30 @@ export async function confirmSubscriber(token: string): Promise<boolean> {
   const rows = (await res.json()) as SubscriberRow[];
   return rows.length > 0;
 }
+
+/** Confirmed, not-unsubscribed subscribers — the live send list. */
+export async function getConfirmedSubscribers(): Promise<
+  { email: string; confirm_token: string }[]
+> {
+  const res = await rest(
+    `${TABLE}?confirmed=eq.true&unsubscribed_at=is.null&select=email,confirm_token`,
+    { method: "GET" }
+  );
+  if (!res.ok) throw new Error(`subscriber list failed: ${res.status}`);
+  return (await res.json()) as { email: string; confirm_token: string }[];
+}
+
+/** One-click unsubscribe by token (the per-row confirm_token doubles as it). */
+export async function unsubscribeByToken(token: string): Promise<boolean> {
+  const res = await rest(
+    `${TABLE}?confirm_token=eq.${encodeURIComponent(token)}&unsubscribed_at=is.null`,
+    {
+      method: "PATCH",
+      headers: { Prefer: "return=representation" },
+      body: JSON.stringify({ unsubscribed_at: new Date().toISOString() }),
+    }
+  );
+  if (!res.ok) return false;
+  const rows = (await res.json()) as SubscriberRow[];
+  return rows.length > 0;
+}

@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: "Career",
   description:
     "15 years of building what matters. From SEO specialist to C-level operator, leading €100M+ budgets across 20+ regulated markets.",
+  alternates: { canonical: "/career" },
+  openGraph: { title: "Career — Eitan Gorodetsky", url: "/career", type: "profile" },
 };
 
 const timeline = [

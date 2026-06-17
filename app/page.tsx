@@ -7,13 +7,14 @@ import ProofBar from "@/components/home/ProofBar";
 import SocialProof from "@/components/home/SocialProof";
 import Section from "@/components/shared/Section";
 import NewsletterCTA from "@/components/NewsletterCTA";
+import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: { absolute: "Eitan Gorodetsky — AI-native marketing operator" },
   description:
     "I run an AI-native marketing operation and write about what it takes to build one — memory, integration, codified workflows, and governance. 15 years in iGaming, tech and digital.",
   alternates: {
-    canonical: "https://eitangorodetsky.com",
+    canonical: SITE_URL,
   },
 };
 

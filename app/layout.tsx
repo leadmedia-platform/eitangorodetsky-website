@@ -8,7 +8,7 @@ import Analytics from "@/components/global/Analytics";
 import SchemaOrg from "@/components/global/SchemaOrg";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL } from "@/lib/constants";
-import { getPersonSchema, getOrganizationSchema } from "@/lib/structured-data";
+import { getPersonSchema, getOrganizationSchema, getWebsiteSchema } from "@/lib/structured-data";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -67,9 +67,9 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     creator: "@eitangorodetsky",
   },
-  alternates: {
-    canonical: SITE_URL,
-  },
+  // No global canonical — each page self-canonicalises (home + essays set their
+  // own; other pages default to their own URL). A global canonical here would
+  // point every page at the homepage.
 };
 
 export default function RootLayout({
@@ -91,6 +91,7 @@ export default function RootLayout({
       <body className="antialiased">
         <SchemaOrg data={getPersonSchema()} />
         <SchemaOrg data={getOrganizationSchema()} />
+        <SchemaOrg data={getWebsiteSchema()} />
         <SkipLink />
         <Navigation />
         <main id="main-content">{children}</main>

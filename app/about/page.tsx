@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SchemaOrg from "@/components/global/SchemaOrg";
+import AiNativeDiagram from "@/components/AiNativeDiagram";
+import { getProfilePageSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "About",
   description:
     "Born in Israel. Shaped by Malta. Now building on the Central Coast of Australia. The full story of 15 years finding what's hidden.",
+  alternates: { canonical: "/about" },
+  openGraph: { title: "About — Eitan Gorodetsky", url: "/about", type: "profile" },
 };
 
 const timeline = [
@@ -84,6 +89,7 @@ const values = [
 export default function AboutPage() {
   return (
     <div className="pt-20">
+      <SchemaOrg data={getProfilePageSchema()} />
       {/* Hero */}
       <section
         className="py-24 md:py-32"
@@ -127,6 +133,25 @@ export default function AboutPage() {
             <p>
               The answer was Australia. Central Coast. Ocean. Clarity. Now I build and run an AI-native marketing operation — agency work, owned ventures, products — largely on my own, on the AI layer. And I write about what it actually takes, in the open. Fifteen years of finding what&apos;s hidden, pointed at the thing I think matters most now: building businesses that actually run on AI, not just use it.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* How the operation runs — AI-native architecture */}
+      <section className="bg-brand-card py-20 md:py-28">
+        <div className="mx-auto max-w-[1280px] px-6">
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-brand-teal">
+            How the operation runs
+          </p>
+          <h2 className="font-serif text-2xl font-bold text-brand-dark md:text-3xl">
+            What &ldquo;AI-native&rdquo; actually means here
+          </h2>
+          <p className="mt-3 max-w-[640px] text-brand-gray">
+            Not AI bolted on as a feature. Four layers that let the business run
+            <em> on</em> it — and the reason one operator can run what used to take a team.
+          </p>
+          <div className="mt-12">
+            <AiNativeDiagram />
           </div>
         </div>
       </section>
