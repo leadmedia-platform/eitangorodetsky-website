@@ -1,30 +1,42 @@
 # Eitan Gorodetsky
-> Operations Intelligence Architect specializing in business operations strategy, consulting, and insights
 
-## Core Pages
-- [Home](https://eitangorodetsky.com/): Introduction to Eitan Gorodetsky and his operations intelligence expertise
-- [About Eitan Gorodetsky](https://eitangorodetsky.com/about): Professional background and experience in operations intelligence architecture
-- [Operations Intelligence Architecture](https://eitangorodetsky.com/oia): Framework and methodology for operations intelligence
-- [Work With Me](https://eitangorodetsky.com/work-with-me): Consulting services and engagement opportunities
+> AI-native marketing operator. Builds and runs a multi-pillar marketing operation — agency work, owned ventures, and products — largely solo, on the AI layer, and writes about what it actually takes. 15+ years across iGaming, tech, and digital (€100M+ budgets, 20+ regulated markets, teams to 120).
 
-## Stories & Insights
-- [Stories](https://eitangorodetsky.com/stories): Collection of operational intelligence narratives and case studies
-- [The Meeting After the Meeting](https://eitangorodetsky.com/stories/the-meeting-after-the-meeting): Story about hidden organizational dynamics
-- [The Number Nobody Looks At](https://eitangorodetsky.com/stories/the-number-nobody-looks-at): Insights on overlooked operational metrics
-- [The Vendor Who Knew Too Much](https://eitangorodetsky.com/stories/the-vendor-who-knew-too-much): Story about external operational perspectives
-- [What the Dashboard Hides](https://eitangorodetsky.com/stories/what-the-dashboard-hides): Analysis of dashboard limitations and blind spots
+## Core pages
+- [Home](https://eitangorodetsky.com/): What an AI-native marketing operation is, and how Eitan runs one.
+- [About](https://eitangorodetsky.com/about): Background — Israel → Malta → Australia; 15 years across iGaming, tech, and digital; now building in the open.
+- [Services / Work With Me](https://eitangorodetsky.com/work-with-me): Margin Recovery Audit, fractional operational engagements, speaking.
+- [Career](https://eitangorodetsky.com/career): Full professional history (888 Holdings, Catena Media, Betsson Group, Speed Media Group, TonyBet).
+- [Contact](https://eitangorodetsky.com/contact): Get in touch.
 
-## Resources
-- [Tools](https://eitangorodetsky.com/tools): Operational intelligence tools and resources
+## Writing (essays)
+- [Writing index](https://eitangorodetsky.com/writing): Essays on building and operating an AI-native marketing business.
+- [What an AI-native marketing operation actually looks like](https://eitangorodetsky.com/writing/ai-native-marketing-operation): The difference between *using* AI and *running on* it; the four architectural layers (memory, integration, codified workflows, gated autonomy) and the AI-native maturity ladder.
+- [Where Gen-AI actually moves marketing ROI — and where it's theatre](https://eitangorodetsky.com/writing/where-ai-moves-roi): The compounding test for separating AI leverage from AI theatre.
+- [AI governance that speeds you up — govern the blast radius, not the intelligence](https://eitangorodetsky.com/writing/ai-governance-blast-radius): Governance as an accelerator; control what AI can touch, not what it can think.
+
+## Frameworks
+- [The AI-native maturity ladder](https://eitangorodetsky.com/writing/ai-native-marketing-operation): Tools → Assistants → Colleagues → Operating system.
+- [The compounding test](https://eitangorodetsky.com/writing/where-ai-moves-roi): Does it touch the real system, remember across time, and run repeatedly + improve?
+- [Govern the blast radius, not the intelligence](https://eitangorodetsky.com/writing/ai-governance-blast-radius): Least-privilege hands, gated promotion, provenance, data boundaries, named accountability.
+
+## Thinking
+- [Thinking](https://eitangorodetsky.com/thinking): Frameworks and methodology.
+- [Operations Intelligence Architecture](https://eitangorodetsky.com/thinking/oia)
+- [SCU](https://eitangorodetsky.com/thinking/scu)
+- [Building with AI](https://eitangorodetsky.com/thinking/ai): An operator's view of building with AI.
+
+## Inner World
+- [Inner World](https://eitangorodetsky.com/inner-world): The practices behind the operator — freediving, Kabbalah, bodywork, sound.
+
+## Topics of authority
+- AI-native marketing operations
+- The AI-native maturity ladder (Tools → Assistants → Colleagues → Operating system)
+- AI governance and the blast-radius model
+- Where Gen-AI moves marketing ROI versus theatre (the compounding test)
+- Operational intelligence and margin recovery
+- iGaming and performance marketing at scale
 
 ## Legal
-- [Privacy Policy](https://eitangorodetsky.com/privacy): Data privacy and protection information
-- [Terms of Service](https://eitangorodetsky.com/terms): Terms and conditions for website use
-
-## Topics of Authority
-- Operations Intelligence Architecture
-- Business Operations Strategy
-- Organizational Metrics and Analytics
-- Operational Decision-Making
-- Consulting and Advisory Services
-- Real-world operational storytelling and case studies
+- [Privacy Policy](https://eitangorodetsky.com/privacy)
+- [Terms of Service](https://eitangorodetsky.com/terms)

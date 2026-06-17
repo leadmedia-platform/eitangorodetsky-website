@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SchemaOrg from "@/components/global/SchemaOrg";
+import { getProfilePageSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "About",
@@ -84,6 +86,7 @@ const values = [
 export default function AboutPage() {
   return (
     <div className="pt-20">
+      <SchemaOrg data={getProfilePageSchema()} />
       {/* Hero */}
       <section
         className="py-24 md:py-32"

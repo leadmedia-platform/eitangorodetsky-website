@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ServiceCard from "@/components/work/ServiceCard";
 import FAQ from "@/components/work/FAQ";
+import SchemaOrg from "@/components/global/SchemaOrg";
+import { getFAQPageSchema, getServiceSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "Work With Me",
@@ -82,6 +84,10 @@ const faqs = [
 export default function WorkWithMePage() {
   return (
     <div className="pt-20">
+      <SchemaOrg data={getFAQPageSchema(faqs)} />
+      {getServiceSchema(services).map((s, i) => (
+        <SchemaOrg key={`svc-${i}`} data={s} />
+      ))}
       {/* Hero */}
       <section
         className="py-24 md:py-32"
