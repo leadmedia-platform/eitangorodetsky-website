@@ -14,6 +14,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Writing (essays)
     { url: `${SITE_URL}/writing`,                     lastModified: new Date(), changeFrequency: "weekly",  priority: 0.9 },
 
+    // Building (capability showcase)
+    { url: `${SITE_URL}/building`,                    lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+
     // Thinking section
     { url: `${SITE_URL}/thinking`,                    lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE_URL}/thinking/oia`,                lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
