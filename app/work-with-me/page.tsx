@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ServiceCard from "@/components/work/ServiceCard";
 import FAQ from "@/components/work/FAQ";
 import SchemaOrg from "@/components/global/SchemaOrg";
 import { getFAQPageSchema, getServiceSchema } from "@/lib/structured-data";
@@ -8,78 +7,55 @@ import { getFAQPageSchema, getServiceSchema } from "@/lib/structured-data";
 export const metadata: Metadata = {
   title: "Work With Me",
   description:
-    "Margin Recovery Audit, Fractional COO, Atlassian consulting, speaking. How I work with founders and operators.",
+    "How I work with founders and operators on AI-native operations — no packages off a shelf. Reach out and we figure out the fit together.",
   alternates: { canonical: "/work-with-me" },
   openGraph: { title: "Work With Me — Eitan Gorodetsky", url: "/work-with-me", type: "website" },
 };
 
-const services = [
+// Kinds of work — described, never priced. Schema carries no Offer.
+const areas = [
   {
-    title: "Margin Recovery Audit",
-    duration: "4 weeks",
-    investment: "$10,000 base + $10,000 success fee",
+    title: "AI-native operations",
     description:
-      "Systematic discovery of hidden costs. A detailed margin recovery roadmap with quantified impact and prioritized actions. In over a decade of doing this work, I've never completed an audit without finding significant hidden costs.",
-    idealFor:
-      "Companies with 50–500 person teams, annual revenue $5M+",
-    flagship: true,
+      "Designing and running a business that actually runs on AI — persistent memory, real integrations, codified workflows, and autonomy you can trust. The thing I do every day, applied to yours.",
   },
   {
-    title: "Fractional COO",
-    duration: "Flexible (4–12 weeks typical)",
-    investment: "Custom based on scope",
+    title: "Operational intelligence & margin",
     description:
-      "Direct operational leadership, strategic guidance, systems improvement, team coaching, and executive advisory. Ideal for companies that need senior operational thinking without a full-time hire.",
-    idealFor:
-      "Fast-growing startups needing operational infrastructure",
-    flagship: false,
+      "Finding what's hidden and fixing what's broken — the costs, friction, and decision lag that quietly compound. Structured discovery, then the changes that actually move a number.",
   },
   {
-    title: "Atlassian Implementation & Optimisation",
-    duration: "Ongoing (projects 6–16 weeks)",
-    investment: "Custom",
+    title: "Fractional operational leadership",
     description:
-      "Jira/Confluence architecture, workflow optimisation, automation setup, and team adoption training. Built from the ground up or fixed when it's become a mess.",
-    idealFor:
-      "Teams struggling with Jira/Confluence setup or adoption",
-    flagship: false,
+      "Senior operational thinking without a full-time hire. Direct help shipping the change, not a slide deck — for teams that need the operating layer built or fixed.",
   },
   {
-    title: "Speaking & Workshop Facilitation",
-    duration: "1–4 hours",
-    investment: "Custom",
+    title: "Advisory, talks & workshops",
     description:
-      "Board talks, company workshops, and team training on operational intelligence, margin recovery, AI in operations, and process design. Previous venues: SIGMA, MARE BALTICUM Gaming Summit.",
-    idealFor: "Leadership teams and industry conferences",
-    flagship: false,
+      "Board talks and team sessions on AI in operations, governance that speeds you up, and operating models that ship. Previous venues include SIGMA and MARE BALTICUM Gaming Summit.",
   },
 ];
 
 const faqs = [
   {
-    question: "How do I know if I need an audit?",
+    question: "Do you have fixed packages?",
     answer:
-      "If your margins have been flat or declining despite revenue growth, if you suspect there are costs you can't see, or if your team spends significant time on manual workarounds — you likely need an audit. The discovery call is free and will help us determine if it's the right fit.",
+      "No. Every engagement is shaped to the problem. Tell me what you're wrestling with and we'll figure out the right way to work together — scope, shape, and pace.",
   },
   {
-    question: "What if we don't find anything?",
+    question: "How does it start?",
     answer:
-      "In over a decade of doing this work, I've never completed an audit without finding significant hidden costs. The base fee covers the work regardless, and the success fee only applies if we find recoverable margin above a pre-agreed threshold.",
+      "A conversation. No forms to fill or pitch deck to sit through — just reach out and we'll talk about what's actually going on. If there's a fit, we'll shape it from there.",
   },
   {
-    question: "How is the success fee calculated?",
+    question: "Who do you work with?",
     answer:
-      "The success fee is tied to the quantified annual impact of the findings. We agree on the calculation methodology before the engagement begins, so there are no surprises. It's designed to align our incentives — I only earn more when you save more.",
+      "Founders and operators who want their business to genuinely run on AI, and leaders who'd rather build the thing than just talk about it.",
   },
   {
-    question: "Can we do this remotely?",
+    question: "Remote or on-site?",
     answer:
-      "Yes. Most audits are conducted remotely with a combination of data analysis, video interviews, and screen-sharing sessions. For larger engagements, on-site visits can be arranged.",
-  },
-  {
-    question: "What's the time commitment from our team?",
-    answer:
-      "Minimal. I'll need 2–3 hours of stakeholder interviews in week one, access to relevant systems and data, and a 1-hour check-in per week. The heavy lifting is on my side.",
+      "Mostly remote — data, calls, and working sessions. On-site when it earns its place.",
   },
 ];
 
@@ -87,9 +63,10 @@ export default function WorkWithMePage() {
   return (
     <div className="pt-20">
       <SchemaOrg data={getFAQPageSchema(faqs)} />
-      {getServiceSchema(services).map((s, i) => (
+      {getServiceSchema(areas).map((s, i) => (
         <SchemaOrg key={`svc-${i}`} data={s} />
       ))}
+
       {/* Hero */}
       <section
         className="py-24 md:py-32"
@@ -97,29 +74,47 @@ export default function WorkWithMePage() {
       >
         <div className="mx-auto max-w-[1280px] px-6">
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-white/60">
-            Consulting Services
+            Work with me
           </p>
           <h1 className="font-serif text-4xl font-bold text-white md:text-5xl">
-            Work With Me
+            Let&apos;s figure it out together
           </h1>
-          <p className="mt-6 max-w-[560px] text-lg text-white/75">
-            Four ways I work with founders and operators — from a fixed-scope margin audit to fractional operational leadership.
+          <p className="mt-6 max-w-[600px] text-lg text-white/80">
+            I don&apos;t sell packages off a shelf. The work is shaped to the problem — so the
+            best place to start isn&apos;t a price list, it&apos;s a conversation. If something
+            here resonates, reach out and we&apos;ll work out the fit.
           </p>
+          <Link
+            href="/contact"
+            className="mt-8 inline-block rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-brand-blue transition-colors hover:bg-brand-gold hover:text-brand-dark"
+          >
+            Reach out
+          </Link>
         </div>
       </section>
 
-      {/* Services */}
+      {/* Where I help */}
       <section className="bg-brand-bg py-24 md:py-32">
         <div className="mx-auto max-w-[1280px] px-6">
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-brand-teal">
-            Services
+            Where I help
           </p>
-          <h2 className="mb-16 font-serif text-3xl font-bold text-brand-dark md:text-4xl">
-            Four ways to work together
+          <h2 className="mb-4 font-serif text-3xl font-bold text-brand-dark md:text-4xl">
+            The kinds of problems I work on
           </h2>
+          <p className="mb-14 max-w-[620px] text-brand-gray">
+            Not a menu to order from — a sense of where I tend to be useful. Most real work
+            starts somewhere in here and gets shaped from there.
+          </p>
           <div className="grid gap-6 md:grid-cols-2">
-            {services.map((service) => (
-              <ServiceCard key={service.title} {...service} />
+            {areas.map((a) => (
+              <div
+                key={a.title}
+                className="rounded-2xl border border-brand-dark/8 bg-brand-card p-8"
+              >
+                <h3 className="font-serif text-xl font-bold text-brand-dark">{a.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-brand-gray">{a.description}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -129,7 +124,7 @@ export default function WorkWithMePage() {
       <section className="bg-brand-card py-24 md:py-32">
         <div className="mx-auto max-w-[1280px] px-6">
           <h2 className="mb-12 font-serif text-3xl font-bold text-brand-dark md:text-4xl">
-            Frequently Asked Questions
+            A few honest answers
           </h2>
           <div className="max-w-[700px]">
             <FAQ items={faqs} />
@@ -141,16 +136,16 @@ export default function WorkWithMePage() {
       <section className="bg-brand-bg py-20">
         <div className="mx-auto max-w-[600px] px-6 text-center">
           <h2 className="font-serif text-2xl font-bold text-brand-dark md:text-3xl">
-            Ready to start a conversation?
+            The best way to find out is to talk
           </h2>
           <p className="mt-4 text-brand-gray">
-            30 minutes. No commitment. Let&apos;s see if there&apos;s a fit.
+            Tell me what you&apos;re working on. We&apos;ll figure out if — and how — I can help.
           </p>
           <Link
             href="/contact"
             className="mt-8 inline-block rounded-full bg-brand-blue px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-brand-teal"
           >
-            Get in touch
+            Reach out
           </Link>
         </div>
       </section>

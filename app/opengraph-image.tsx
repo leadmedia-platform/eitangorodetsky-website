@@ -25,7 +25,7 @@ export default async function Image() {
           style={{
             width: "64px",
             height: "3px",
-            background: "#C4902A",
+            background: "#D4A853",
             borderRadius: "2px",
           }}
         />
@@ -103,17 +103,18 @@ export default async function Image() {
           </div>
           <div
             style={{
-              width: "48px",
-              height: "48px",
-              borderRadius: "50%",
-              background: "rgba(255,255,255,0.1)",
-              border: "1px solid rgba(255,255,255,0.2)",
+              width: "52px",
+              height: "52px",
+              borderRadius: "12px",
+              background: "rgba(255,255,255,0.08)",
+              border: "2px solid rgba(255,255,255,0.25)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "rgba(255,255,255,0.6)",
-              fontSize: "20px",
-              fontFamily: "sans-serif",
+              color: "rgba(255,255,255,0.75)",
+              fontSize: "24px",
+              fontWeight: 700,
+              fontFamily: "serif",
             }}
           >
             EG
