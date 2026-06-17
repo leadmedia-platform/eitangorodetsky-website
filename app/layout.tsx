@@ -67,9 +67,9 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     creator: "@eitangorodetsky",
   },
-  alternates: {
-    canonical: SITE_URL,
-  },
+  // No global canonical — each page self-canonicalises (home + essays set their
+  // own; other pages default to their own URL). A global canonical here would
+  // point every page at the homepage.
 };
 
 export default function RootLayout({

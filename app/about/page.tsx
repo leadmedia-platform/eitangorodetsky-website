@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Born in Israel. Shaped by Malta. Now building on the Central Coast of Australia. The full story of 15 years finding what's hidden.",
+  alternates: { canonical: "/about" },
+  openGraph: { title: "About — Eitan Gorodetsky", url: "/about", type: "profile" },
 };
 
 const timeline = [

@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   title: "Work With Me",
   description:
     "Margin Recovery Audit, Fractional COO, Atlassian consulting, speaking. How I work with founders and operators.",
+  alternates: { canonical: "/work-with-me" },
+  openGraph: { title: "Work With Me — Eitan Gorodetsky", url: "/work-with-me", type: "website" },
 };
 
 const services = [

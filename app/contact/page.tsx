@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Get in touch with Eitan Gorodetsky — for a margin audit or advisory, a talk, collaboration, or just an interesting conversation about building AI-native.",
+  alternates: { canonical: "/contact" },
+  openGraph: { title: "Contact — Eitan Gorodetsky", url: "/contact", type: "website" },
 };
 
 export default function ContactPage() {
