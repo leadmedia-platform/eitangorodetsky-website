@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import SchemaOrg from "@/components/global/SchemaOrg";
+import { getFrameworkSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "AI in Operations & Marketing",
@@ -37,6 +39,14 @@ const tools = [
 export default function AIPage() {
   return (
     <div className="pt-20">
+      {getFrameworkSchema({
+        name: "AI in Operations & Marketing",
+        description:
+          "How AI actually changes the way businesses run — beyond the hype, into real workflow architecture.",
+        path: "/thinking/ai",
+      }).map((d, i) => (
+        <SchemaOrg key={i} data={d} />
+      ))}
       {/* Hero */}
       <section
         className="py-24 md:py-32"

@@ -1,18 +1,22 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-@theme inline {
-  /* New Brand Colors — spec 2026 */
+/* NON-inline @theme so utilities reference the vars (var-referencing) and the
+   dark overrides below cascade. Anchors mirror lib/brand.ts (source of truth). */
+@theme {
+  /* Core palette */
   --color-brand-blue: #1B5E8C;
   --color-brand-teal: #2D8B6F;
   --color-brand-gold: #D4A853;
+  --color-brand-slate: #0D2B3E;  /* authority depth (was inline #0d2b3e) */
+  --color-brand-signal: #4A8FB8; /* builder signal accent */
   --color-brand-dark: #1A1A1A;
   --color-brand-gray: #6B7280;
   --color-brand-bg: #FAFAF8;
   --color-brand-card: #F5F3EF;
   --color-brand-white: #FFFFFF;
 
-  /* Legacy aliases kept for components not yet migrated */
+  /* Legacy aliases — mapped to core; migrate components then remove */
   --color-brand-cream: #FAFAF8;
   --color-brand-charcoal: #1A1A1A;
   --color-brand-amber: #D4A853;
@@ -34,6 +38,55 @@
   --font-mono: var(--font-jetbrains), monospace;
 }
 
+/* Dark palette — overrides EVERY token (real dark mode, not just <body>).
+   Values mirror lib/brand.ts `dark`. Applied to manual (.dark) + system (.dark-auto). */
+@layer base {
+  html.dark {
+    --color-brand-blue: #5BA3D0;
+    --color-brand-teal: #5FB89A;
+    --color-brand-gold: #E0BC6E;
+    --color-brand-slate: #0A1922;
+    --color-brand-signal: #5BA3D0;
+    --color-brand-dark: #E8E5E0;
+    --color-brand-gray: #9CA3AF;
+    --color-brand-bg: #111110;
+    --color-brand-card: #1C1C1A;
+    --color-brand-cream: #111110;
+    --color-brand-charcoal: #E8E5E0;
+    --color-brand-amber: #E0BC6E;
+    --color-brand-terracotta: #5BA3D0;
+    --color-brand-sage: #5FB89A;
+    --color-brand-navy: #5BA3D0;
+    --color-text-primary: #E8E5E0;
+    --color-text-secondary: #9CA3AF;
+    --color-bg-primary: #111110;
+    --color-bg-secondary: #1C1C1A;
+  }
+  @media (prefers-color-scheme: dark) {
+    html.dark-auto {
+      --color-brand-blue: #5BA3D0;
+      --color-brand-teal: #5FB89A;
+      --color-brand-gold: #E0BC6E;
+      --color-brand-slate: #0A1922;
+      --color-brand-signal: #5BA3D0;
+      --color-brand-dark: #E8E5E0;
+      --color-brand-gray: #9CA3AF;
+      --color-brand-bg: #111110;
+      --color-brand-card: #1C1C1A;
+      --color-brand-cream: #111110;
+      --color-brand-charcoal: #E8E5E0;
+      --color-brand-amber: #E0BC6E;
+      --color-brand-terracotta: #5BA3D0;
+      --color-brand-sage: #5FB89A;
+      --color-brand-navy: #5BA3D0;
+      --color-text-primary: #E8E5E0;
+      --color-text-secondary: #9CA3AF;
+      --color-bg-primary: #111110;
+      --color-bg-secondary: #1C1C1A;
+    }
+  }
+}
+
 /* Base */
 html {
   scroll-behavior: smooth;
@@ -45,18 +98,7 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  html.dark-auto body {
-    background-color: #111110;
-    color: #E8E5E0;
-  }
-}
-
-html.dark body {
-  background-color: #111110;
-  color: #E8E5E0;
-}
+/* (dark mode now handled by the token overrides above — body uses the vars) */
 
 /* Selection */
 ::selection {
