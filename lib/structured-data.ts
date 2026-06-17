@@ -1,15 +1,34 @@
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "./constants";
 import type { EssayFrontmatter } from "./types";
 
+/** Stable entity ids so schemas reference one canonical Person/Org (not duplicates). */
+export const PERSON_ID = `${SITE_URL}/#person`;
+export const ORG_ID = `${SITE_URL}/#organization`;
+
+const PERSON_SAME_AS = [
+  "https://linkedin.com/in/socialeitan",
+  "https://twitter.com/eitangorodetsky",
+  "https://instagram.com/eitangorodetsky",
+  "https://eitangorodetsky.substack.com",
+];
+
 export function getPersonSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": PERSON_ID,
     name: SITE_NAME,
     jobTitle: "AI-native marketing operator",
     description:
       "Builds and runs an AI-native marketing operation and writes about what it takes — memory, integration, codified workflows, governance. 15+ years across iGaming, tech, and digital.",
     url: SITE_URL,
+    mainEntityOfPage: SITE_URL,
+    hasOccupation: {
+      "@type": "Occupation",
+      name: "AI-native marketing operator",
+      occupationLocation: { "@type": "Country", name: "Australia" },
+    },
+    worksFor: { "@id": ORG_ID },
     knowsAbout: [
       "AI-native operations",
       "Marketing operations",
@@ -17,15 +36,16 @@ export function getPersonSchema() {
       "AI governance",
       "Margin recovery",
       "Organisational design",
+      "Generative AI in marketing",
+      "Marketing technology",
+      "Operations Intelligence Architecture",
+      "AI-native maturity ladder",
+      "The compounding test",
+      "Autonomous ingestion, gated promotion",
       "iGaming",
       "Performance marketing",
     ],
-    sameAs: [
-      "https://linkedin.com/in/socialeitan",
-      "https://twitter.com/eitangorodetsky",
-      "https://instagram.com/eitangorodetsky",
-      "https://eitangorodetsky.substack.com",
-    ],
+    sameAs: PERSON_SAME_AS,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Central Coast",
@@ -39,45 +59,54 @@ export function getOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": ORG_ID,
     name: SITE_NAME,
     url: SITE_URL,
     description:
       "AI-native marketing operator — building businesses that run on AI, and writing about what it takes.",
+    founder: { "@id": PERSON_ID },
+    sameAs: PERSON_SAME_AS,
   };
 }
 
 export function getEssayArticleSchema(
   slug: string,
-  frontmatter: EssayFrontmatter
+  frontmatter: EssayFrontmatter,
+  wordCount?: number
 ) {
+  const url = `${SITE_URL}/writing/${slug}`;
+  const keywords = [frontmatter.framework, frontmatter.pillar].filter(Boolean);
   return {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": url,
     headline: frontmatter.title,
     description: frontmatter.excerpt,
-    author: {
-      "@type": "Person",
-      name: frontmatter.author || SITE_NAME,
-      url: SITE_URL,
-      sameAs: [
-        "https://linkedin.com/in/socialeitan",
-        "https://twitter.com/eitangorodetsky",
-      ],
-    },
-    publisher: {
-      "@type": "Person",
-      name: SITE_NAME,
-    },
+    inLanguage: "en",
+    author: { "@id": PERSON_ID },
+    publisher: { "@id": ORG_ID },
     datePublished: frontmatter.date,
     dateModified: frontmatter.date,
-    url: `${SITE_URL}/writing/${slug}`,
-    mainEntityOfPage: `${SITE_URL}/writing/${slug}`,
+    url,
+    mainEntityOfPage: url,
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    ...(keywords.length ? { keywords } : {}),
+    ...(frontmatter.pillar ? { articleSection: frontmatter.pillar } : {}),
+    ...(wordCount ? { wordCount } : {}),
+    ...(frontmatter.sources?.length
+      ? {
+          citation: frontmatter.sources.map((s) => ({
+            "@type": "CreativeWork",
+            name: s.name,
+            ...(s.url ? { url: s.url } : {}),
+            ...(s.date ? { datePublished: s.date } : {}),
+          })),
+        }
+      : {}),
   };
 }
 
-export function getBreadcrumbSchema(
-  items: { name: string; url: string }[]
-) {
+export function getBreadcrumbSchema(items: { name: string; url: string }[]) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -94,10 +123,11 @@ export function getWebsiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
     name: SITE_NAME,
     url: SITE_URL,
     description: SITE_DESCRIPTION,
-    publisher: { "@type": "Person", name: SITE_NAME, url: SITE_URL },
+    publisher: { "@id": PERSON_ID },
   };
 }
 
@@ -110,9 +140,7 @@ export function getProfilePageSchema() {
   };
 }
 
-export function getFAQPageSchema(
-  items: { question: string; answer: string }[]
-) {
+export function getFAQPageSchema(items: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -133,10 +161,52 @@ export function getServiceSchema(
     "@type": "Service",
     name: s.title,
     description: s.description,
-    provider: { "@type": "Person", name: SITE_NAME, url: SITE_URL },
+    provider: { "@id": PERSON_ID },
     areaServed: "Worldwide",
     ...(s.investment
       ? { offers: { "@type": "Offer", description: s.investment, priceCurrency: "AUD" } }
       : {}),
   }));
+}
+
+/**
+ * Framework pages (OIA, SCU, AI) as named, citable concepts.
+ * DefinedTerm + CreativeWork so frontier LLMs resolve the framework as an entity
+ * authored by Eitan, not just page text.
+ */
+export function getFrameworkSchema(opts: {
+  name: string;
+  description: string;
+  path: string;
+  datePublished?: string;
+  termCode?: string;
+}) {
+  const url = `${SITE_URL}${opts.path}`;
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      "@id": `${url}#term`,
+      name: opts.name,
+      description: opts.description,
+      url,
+      ...(opts.termCode ? { termCode: opts.termCode } : {}),
+      inDefinedTermSet: {
+        "@type": "DefinedTermSet",
+        name: "Eitan Gorodetsky — operating frameworks",
+        url: `${SITE_URL}/thinking`,
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "@id": `${url}#work`,
+      name: opts.name,
+      description: opts.description,
+      url,
+      author: { "@id": PERSON_ID },
+      publisher: { "@id": ORG_ID },
+      ...(opts.datePublished ? { datePublished: opts.datePublished } : {}),
+    },
+  ];
 }
