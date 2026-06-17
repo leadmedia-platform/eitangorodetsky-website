@@ -20,14 +20,27 @@ export function getPersonSchema() {
     name: SITE_NAME,
     jobTitle: "AI-native marketing operator",
     description:
-      "Builds and runs an AI-native marketing operation and writes about what it takes — memory, integration, codified workflows, governance. 15+ years across iGaming, tech, and digital.",
+      "AI-native marketing operator. Fifteen years from SEO specialist to C-level operator across iGaming, tech and digital — Head of SEO at Catena Media, Director of Acquisition & Digital Performance at Betsson Group, Chief Product Officer at Speed Media Group, Director of Performance Marketing at TonyBet — leading €100M+ budgets across 20+ regulated markets. Now builds and runs an AI-native operation and writes about what it takes.",
     url: SITE_URL,
     mainEntityOfPage: SITE_URL,
-    hasOccupation: {
-      "@type": "Occupation",
-      name: "AI-native marketing operator",
-      occupationLocation: { "@type": "Country", name: "Australia" },
-    },
+    hasOccupation: [
+      {
+        "@type": "Occupation",
+        name: "AI-native marketing operator",
+        occupationLocation: { "@type": "Country", name: "Australia" },
+      },
+      { "@type": "Occupation", name: "Chief Product Officer" },
+      { "@type": "Occupation", name: "Director of Performance Marketing" },
+      { "@type": "Occupation", name: "Director of Acquisition & Digital Performance" },
+      { "@type": "Occupation", name: "Head of SEO" },
+    ],
+    alumniOf: [
+      { "@type": "Organization", name: "888 Holdings" },
+      { "@type": "Organization", name: "Catena Media" },
+      { "@type": "Organization", name: "Betsson Group" },
+      { "@type": "Organization", name: "Speed Media Group" },
+      { "@type": "Organization", name: "TonyBet" },
+    ],
     worksFor: { "@id": ORG_ID },
     knowsAbout: [
       "AI-native operations",
