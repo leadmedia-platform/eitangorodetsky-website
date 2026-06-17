@@ -83,6 +83,11 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} ${jetbrains.variable}`}
     >
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.classList.add('dark');}catch(e){}})();`,
+          }}
+        />
         <Script
           src="https://agentready.site/api/snippet/cmmfvwpu30001l204eedrvi0l/ar.js"
           strategy="afterInteractive"

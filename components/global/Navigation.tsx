@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV_LINKS } from "@/lib/constants";
+import Monogram from "@/components/global/Monogram";
+import ThemeToggle from "@/components/global/ThemeToggle";
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -43,9 +45,13 @@ export default function Navigation() {
         {/* Logo */}
         <Link
           href="/"
-          className="font-serif text-base font-bold tracking-widest text-brand-dark uppercase"
+          className="flex items-center gap-2.5 text-brand-dark"
+          aria-label="Eitan Gorodetsky — home"
         >
-          EITAN GORODETSKY
+          <Monogram size={30} />
+          <span className="font-serif text-base font-bold tracking-widest uppercase">
+            Eitan Gorodetsky
+          </span>
         </Link>
 
         {/* Desktop Links */}
@@ -67,13 +73,16 @@ export default function Navigation() {
           ))}
         </ul>
 
-        {/* Desktop CTA */}
-        <Link
-          href="/contact"
-          className="hidden rounded-full bg-brand-blue px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-brand-teal lg:inline-block"
-        >
-          Let&apos;s Talk
-        </Link>
+        {/* Desktop CTA + theme toggle */}
+        <div className="hidden items-center gap-2 lg:flex">
+          <ThemeToggle />
+          <Link
+            href="/contact"
+            className="rounded-full bg-brand-blue px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-brand-teal"
+          >
+            Let&apos;s Talk
+          </Link>
+        </div>
 
         {/* Mobile Hamburger */}
         <button
