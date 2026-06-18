@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackContactSubmit } from "@/lib/analytics";
 
 export default function ContactForm() {
   const [form, setForm] = useState({ name: "", email: "", reason: "", message: "" });
@@ -20,6 +21,7 @@ export default function ContactForm() {
       });
 
       if (res.ok) {
+        trackContactSubmit(form.reason);
         setStatus("success");
       } else {
         const data = await res.json().catch(() => ({}));

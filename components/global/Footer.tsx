@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SOCIAL_LINKS, SITE_NAME } from "@/lib/constants";
 import Monogram from "@/components/global/Monogram";
+import SocialLink from "@/components/global/SocialLink";
 
 const navigate = [
   { label: "Home",         href: "/" },
@@ -71,14 +72,13 @@ export default function Footer() {
           <ul className="mt-4 space-y-2.5">
             {SOCIAL_LINKS.map((link) => (
               <li key={link.href}>
-                <a
+                <SocialLink
                   href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  platform={link.label}
                   className="text-sm text-brand-gray transition-colors hover:text-brand-blue"
                 >
                   {link.label}
-                </a>
+                </SocialLink>
               </li>
             ))}
             <li>
