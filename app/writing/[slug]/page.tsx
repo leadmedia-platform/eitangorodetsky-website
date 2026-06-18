@@ -5,6 +5,7 @@ import Link from "next/link";
 import { getEssayBySlug, getEssaySlugs, getAllEssays } from "@/lib/essays";
 import { mdxComponents } from "@/components/mdx/MDXComponents";
 import SchemaOrg from "@/components/global/SchemaOrg";
+import ScrollDepthTracker from "@/components/global/ScrollDepthTracker";
 import NewsletterCTA from "@/components/NewsletterCTA";
 import { getEssayArticleSchema, getBreadcrumbSchema } from "@/lib/structured-data";
 import { SITE_URL } from "@/lib/constants";
@@ -67,6 +68,7 @@ export default async function EssayPage({ params }: EssayPageProps) {
 
   return (
     <div className="pt-24 pb-16">
+      <ScrollDepthTracker slug={slug} />
       <SchemaOrg data={getEssayArticleSchema(slug, fm, wordCount)} />
       <SchemaOrg
         data={getBreadcrumbSchema([

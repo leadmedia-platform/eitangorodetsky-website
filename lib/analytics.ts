@@ -50,3 +50,7 @@ export function trackCTAClick(
 export function trackSocialClick(platform: string) {
   gtag("event", "social_click", { platform });
 }
+
+export function trackContactSubmit(reason: string) {
+  gtag("event", "contact_submit", { reason: reason || "unspecified" });
+}
