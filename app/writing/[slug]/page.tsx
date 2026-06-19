@@ -97,6 +97,9 @@ export default async function EssayPage({ params }: EssayPageProps) {
           </p>
         </header>
 
+        {/* Early newsletter touchpoint — ~70% of readers never reach the end CTA */}
+        <NewsletterCTA source={`essay:${slug}:top`} inline />
+
         <div className="prose-stories prose prose-lg max-w-none">{content}</div>
 
         {/* Author box */}
