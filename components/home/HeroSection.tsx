@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section
-      className="relative flex min-h-screen items-end justify-start overflow-hidden"
+      className="relative flex min-h-[88svh] items-center justify-start overflow-hidden md:min-h-screen md:items-end"
       style={{
         background:
           "linear-gradient(135deg, #0d2b3e 0%, #1B5E8C 40%, #2D8B6F 100%)",
@@ -21,7 +21,7 @@ export default function HeroSection() {
       />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6 pb-20 pt-40 md:pb-28">
+      <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6 pb-20 pt-28 md:pb-28 md:pt-40">
         <div className="max-w-[720px]">
           <p className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-white/60">
             AI-native marketing operator
