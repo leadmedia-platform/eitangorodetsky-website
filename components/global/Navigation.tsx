@@ -113,7 +113,7 @@ export default function Navigation() {
 
       {/* Mobile Menu Overlay */}
       {mobileOpen && (
-        <div className="fixed inset-0 top-0 z-40 flex flex-col items-center justify-center bg-brand-bg lg:hidden">
+        <div className="fixed inset-0 z-40 flex flex-col items-center justify-start overflow-y-auto overscroll-contain bg-brand-bg px-6 pb-12 pt-24 lg:hidden">
           <ul className="flex flex-col items-center gap-8">
             {NAV_LINKS.map((link) => (
               <li key={link.href}>
