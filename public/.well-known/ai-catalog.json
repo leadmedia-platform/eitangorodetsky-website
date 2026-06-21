@@ -1,0 +1,28 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Eitan Gorodetsky",
+    "identifier": "did:web:eitangorodetsky.com"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:eitangorodetsky.com:knowledge:okf",
+      "displayName": "Eitan Gorodetsky — knowledge bundle",
+      "type": "application/okf-bundle+gzip",
+      "mediaType": "application/okf-bundle+gzip",
+      "url": "https://eitangorodetsky.com/okf.tar.gz",
+      "description": "Essays and frameworks from Eitan Gorodetsky, an AI-native marketing operator: how to build and run a marketing operation on the AI layer, where Gen-AI moves ROI versus theatre, and AI governance by blast radius.",
+      "tags": ["ai-native-marketing", "marketing-operations", "ai-governance", "generative-ai", "igaming"],
+      "representativeQueries": [
+        "what does an AI-native marketing operation actually look like",
+        "the AI-native maturity ladder: tools, assistants, colleagues, operating system",
+        "where does generative AI move marketing ROI versus theatre",
+        "AI governance that speeds you up — govern the blast radius"
+      ],
+      "trustManifest": {
+        "identity": "did:web:eitangorodetsky.com",
+        "identityType": "did"
+      }
+    }
+  ]
+}
