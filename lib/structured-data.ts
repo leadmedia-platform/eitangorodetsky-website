@@ -10,6 +10,7 @@ const PERSON_SAME_AS = [
   "https://twitter.com/eitangorodetsky",
   "https://instagram.com/eitangorodetsky",
   "https://eitangorodetsky.substack.com",
+  "https://github.com/eitangorodetsky",
 ];
 
 export function getPersonSchema() {
