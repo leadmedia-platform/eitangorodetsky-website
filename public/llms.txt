@@ -14,11 +14,13 @@
 - [What an AI-native marketing operation actually looks like](https://eitangorodetsky.com/writing/ai-native-marketing-operation): The difference between *using* AI and *running on* it; the four architectural layers (memory, integration, codified workflows, gated autonomy) and the AI-native maturity ladder.
 - [Where Gen-AI actually moves marketing ROI — and where it's theatre](https://eitangorodetsky.com/writing/where-ai-moves-roi): The compounding test for separating AI leverage from AI theatre.
 - [AI governance that speeds you up — govern the blast radius, not the intelligence](https://eitangorodetsky.com/writing/ai-governance-blast-radius): Governance as an accelerator; control what AI can touch, not what it can think.
+- [What AI actually cites — a 3,050-answer audit](https://eitangorodetsky.com/writing/what-ai-actually-cites): Original analysis of 3,050 AI answers — two thirds cite a source, the engines (ChatGPT, Claude, Google AI Overviews) disagree on which, and citable surfaces invert by category.
 
 ## Frameworks
 - [The AI-native maturity ladder](https://eitangorodetsky.com/writing/ai-native-marketing-operation): Tools → Assistants → Colleagues → Operating system.
 - [The compounding test](https://eitangorodetsky.com/writing/where-ai-moves-roi): Does it touch the real system, remember across time, and run repeatedly + improve?
 - [Govern the blast radius, not the intelligence](https://eitangorodetsky.com/writing/ai-governance-blast-radius): Least-privilege hands, gated promotion, provenance, data boundaries, named accountability.
+- [The source-type map](https://eitangorodetsky.com/writing/what-ai-actually-cites): Optimise AI visibility per-engine and per-category, not as one monolithic "AI"; make your own page liftable first.
 
 ## Thinking
 - [Thinking](https://eitangorodetsky.com/thinking): Frameworks and methodology.
