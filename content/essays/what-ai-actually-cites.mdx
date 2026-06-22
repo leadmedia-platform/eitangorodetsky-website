@@ -1,0 +1,87 @@
+---
+title: "What AI actually cites — a 3,050-answer audit"
+dek: "I ran the same commercial questions through ChatGPT, Claude and Google AI Overviews and counted every source they cited. The engines don't agree with each other, and what they cite depends on your category. The data, and what it changes about AI-visibility strategy."
+date: "2026-06-22"
+readTime: "8 min"
+excerpt: "An original audit of 3,050 AI answers and 11,700 citations. Two thirds of answers cite a source — but which sources differ sharply by engine and by category. 'Get cited by AI' isn't one game, and treating it as one is why most AI-visibility effort misses."
+author: "Eitan Gorodetsky"
+pillar: "Frameworks & teardowns"
+framework: "The source-type map"
+sources:
+  - name: "Original analysis, June 2026 — 3,050 AI answers / 11,703 deduped citations across ChatGPT Search, Claude with web search, and Google AI Overviews."
+    date: "2026-06"
+  - name: "ALM Corp / Omniscient — 23,000-citation analysis (listicle citation share)."
+    date: "2025"
+  - name: "Semrush — 150k-citation LLM reference study (Reddit, Wikipedia share)."
+    date: "2025"
+---
+
+**The short version:** I counted every source in 3,050 AI answers. Two thirds cite something — and the *kind* of source they cite swings hard by engine and by category. ChatGPT cites ordinary web pages almost exclusively; Claude leans on directories and review sites; Google's AI Overviews is the only one that pulls in Reddit and YouTube. "Get cited by AI" is not one game. The teams treating it as one are optimising for an average that doesn't exist.
+
+Most advice about AI visibility runs on a handful of recycled studies and a lot of confident hand-waving. I wanted my own numbers, so I built a measurement harness and pointed it at the question directly: when a buyer asks an AI a commercial question, what does it actually cite?
+
+Here's what 3,050 answers told me — and the three things it should change about how you think about showing up in AI answers.
+
+## How I ran it
+
+I took 230 distinct commercial questions — the kind people type when they're close to a decision — and ran each through three answer engines: ChatGPT Search, Claude with web search, and Google AI Overviews, repeated across multiple runs. For every answer I recorded each source it cited, then de-duplicated domains within an answer so a source counts once per answer regardless of how many of its pages were pulled. That's **3,050 answers, 11,703 citations, 2,662 distinct domains.**
+
+Two honest caveats before any number. This is my scan corpus, not a random sample of the entire web, and the question set is weighted toward categories I work in — so read the *contrasts* between engines and categories as the signal, not the absolute percentages. And it spans several months and model versions, so treat it as a weather report, not a constant.
+
+## Finding 1 — Most answers cite, and they cite the open web
+
+**67% of the answers carried at least one citation.** The other third answered from the model's own memory with nothing to click. When they did cite, roughly **89% of citations went to ordinary individual web pages** — company sites, blogs, editorial articles. The big "consensus platforms" everyone assumes own AI answers — Reddit, YouTube, Wikipedia — were under 4% of citation volume combined.
+
+That punctures the first myth. You do not need a Wikipedia entry or a viral Reddit thread to get cited. A clear, self-contained page that answers the question is the substrate the engines actually pull from. The foundation is ordinary, and it's on your own site.
+
+## Finding 2 — The engines don't agree with each other
+
+This is the part that should change how you budget. I gave the three engines the *same questions* and they cited structurally different kinds of sources:
+
+| Source type | ChatGPT | Claude | Google AI Overviews |
+|---|--:|--:|--:|
+| Individual web pages | 95.5% | 89.2% | 83.5% |
+| Directories | 0.1% | 6.0% | 1.2% |
+| Review platforms | 0.6% | 4.4% | 2.7% |
+| Reddit | 0.0% | 0.0% | 4.0% |
+| YouTube | 1.5% | 0.0% | 3.7% |
+| Social / community | 1.0% | 0.3% | 4.7% |
+
+Read across the rows and three different machines appear:
+
+- **ChatGPT is a purist.** 95.5% of what it cites is an ordinary web page. You win it with a genuinely good, liftable page — and almost nothing else moves it.
+- **Claude trusts third parties.** It leans on directories and review platforms harder than the others combined — over 10% of its citations. Claimed listings and review presence carry real weight here.
+- **Google AI Overviews is the omnivore.** It's the only engine that meaningfully cites Reddit, YouTube and social. If your category lives in communities and video, this is where that shows up.
+
+The strategic consequence is blunt: a page-only strategy quietly wins ChatGPT and underperforms on the other two. "Optimise for AI" as a single objective is optimising for an engine that doesn't exist. The real unit of strategy is *per engine*.
+
+## Finding 3 — What's citable depends on your category
+
+Split the same data by category and the citable surfaces invert:
+
+| Source type | Local & service | Software / SEO / digital |
+|---|--:|--:|
+| Individual web pages | 85.8% | 91.4% |
+| Directories | 6.1% | 0.0% |
+| Review platforms | 5.4% | 0.5% |
+| YouTube | 0.6% | 2.6% |
+| Social / community | 0.7% | 3.3% |
+| Wikipedia | 0.1% | 0.7% |
+
+If you sell a **local or service** offering, your citations come through **directories and review platforms** — the Yelp / HomeGuide / industry-directory layer, over 11% of citations and every one of them a profile you can claim and complete. That's the fastest lever you have, and most teams ignore it because it isn't "content."
+
+If you're in **software, SEO or anything digital**, directories barely register. Your non-page citations skew to **YouTube, community and Wikipedia** — a different doorway entirely, earned over months, not claimed in an afternoon.
+
+One nuance, because the volume numbers hide it: in digital categories YouTube shows up across a *wide spread of distinct questions* even though it's a small share of total citation volume. Breadth and volume aren't the same thing — one well-placed explainer can surface across many queries. When you're deciding where to invest, the question that matters is "how many different answers does this source appear in?", not "what percentage of all citations is it?"
+
+## The source-type map
+
+Put the three findings together and you get a simple map you can run before you spend anything on "AI visibility":
+
+1. **Make your own page liftable first.** Across every cut, ordinary web pages are 85–95% of citations. A clear, self-contained answer on your site is the floor everything else builds on. Skip this and nothing downstream compounds.
+2. **Pick the engine that matters to your buyers, and optimise for *it*.** ChatGPT → your page. Claude → directories and reviews. AI Overviews → community and video. Don't average them.
+3. **Match the off-site work to your category.** Local: claim the directory and review profiles. Digital: invest in video, community and entity presence. Spending local tactics on a digital category (or vice versa) is the most common wasted motion I see.
+
+None of this is exotic. It's just specific — and specificity is exactly what "optimise for AI" erases. The teams that win AI visibility in the next two years won't be the ones with the cleverest tactic. They'll be the ones who stopped treating four very different machines as one.
+
+I'll keep running this audit as the models shift; if you want the underlying methodology or want to compare notes on what you're seeing in your own category, [find me here](/about).
