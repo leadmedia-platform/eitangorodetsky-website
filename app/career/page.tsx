@@ -178,7 +178,7 @@ export default function CareerPage() {
                   Fifteen years of finding what&apos;s hidden, pointed at the thing I think matters most now: building businesses that actually run on AI, not just use it.
                 </p>
                 <p>
-                  I take on a small number of margin audits, fractional operational engagements, and talks. For that — or just to compare notes — get in touch.
+                  I work for myself now, running my own operation. Alongside it I take on a small number of margin audits, advisory engagements, and talks. For that — or just to compare notes — get in touch.
                 </p>
               </div>
             </div>

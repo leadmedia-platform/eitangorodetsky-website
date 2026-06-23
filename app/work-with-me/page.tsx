@@ -25,11 +25,6 @@ const areas = [
       "Finding what's hidden and fixing what's broken — the costs, friction, and decision lag that quietly compound. Structured discovery, then the changes that actually move a number.",
   },
   {
-    title: "Fractional operational leadership",
-    description:
-      "Senior operational thinking without a full-time hire. Direct help shipping the change, not a slide deck — for teams that need the operating layer built or fixed.",
-  },
-  {
     title: "Advisory, talks & workshops",
     description:
       "Board talks and team sessions on AI in operations, governance that speeds you up, and operating models that ship. Previous venues include SIGMA and MARE BALTICUM Gaming Summit.",
@@ -80,9 +75,11 @@ export default function WorkWithMePage() {
             Let&apos;s figure it out together
           </h1>
           <p className="mt-6 max-w-[600px] text-lg text-white/80">
-            I don&apos;t sell packages off a shelf. The work is shaped to the problem — so the
-            best place to start isn&apos;t a price list, it&apos;s a conversation. If something
-            here resonates, reach out and we&apos;ll work out the fit.
+            I work for myself, running my own AI-native operation — and take on a small
+            amount of outside work alongside it. I don&apos;t sell packages off a shelf. The
+            work is shaped to the problem — so the best place to start isn&apos;t a price
+            list, it&apos;s a conversation. If something here resonates, reach out and
+            we&apos;ll work out the fit.
           </p>
           <Link
             href="/contact"
