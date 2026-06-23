@@ -7,7 +7,7 @@ export const ORG_ID = `${SITE_URL}/#organization`;
 
 const PERSON_SAME_AS = [
   "https://linkedin.com/in/socialeitan",
-  "https://twitter.com/eitangorodetsky",
+  "https://x.com/ETHian82",
   "https://instagram.com/eitangorodetsky",
   "https://eitangorodetsky.substack.com",
   "https://github.com/eitangorodetsky",
