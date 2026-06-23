@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    creator: "@eitangorodetsky",
+    creator: "@ETHian82",
   },
   // No global canonical — each page self-canonicalises (home + essays set their
   // own; other pages default to their own URL). A global canonical here would

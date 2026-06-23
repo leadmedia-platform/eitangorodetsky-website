@@ -17,7 +17,7 @@ export const NAV_LINKS = [
 
 export const SOCIAL_LINKS = [
   { label: "LinkedIn",  href: "https://linkedin.com/in/socialeitan",              icon: "linkedin" },
-  { label: "Twitter/X", href: "https://twitter.com/eitangorodetsky",              icon: "twitter" },
+  { label: "Twitter/X", href: "https://x.com/ETHian82",                           icon: "twitter" },
   { label: "Instagram", href: "https://instagram.com/eitangorodetsky",            icon: "instagram" },
   { label: "Substack",  href: "https://eitangorodetsky.substack.com",             icon: "substack" },
 ] as const;
