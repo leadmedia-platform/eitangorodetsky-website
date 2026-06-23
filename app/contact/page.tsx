@@ -81,7 +81,7 @@ export default function ContactPage() {
                   Work together
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-brand-gray">
-                  I take on a small number of margin audits, fractional operational engagements, and talks. Here&apos;s how that works — and what I&apos;m building in the open.
+                  I work for myself, running my own operation — and take on a small number of margin audits, advisory engagements, and talks alongside it. Here&apos;s how that works — and what I&apos;m building in the open.
                 </p>
                 <div className="mt-5 flex flex-col gap-3 sm:flex-row">
                   <a

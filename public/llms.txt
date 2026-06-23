@@ -5,7 +5,7 @@
 ## Core pages
 - [Home](https://eitangorodetsky.com/): What an AI-native marketing operation is, and how Eitan runs one.
 - [About](https://eitangorodetsky.com/about): Background — Israel → Malta → Australia; 15 years across iGaming, tech, and digital; now building in the open.
-- [Services / Work With Me](https://eitangorodetsky.com/work-with-me): Margin Recovery Audit, fractional operational engagements, speaking.
+- [Services / Work With Me](https://eitangorodetsky.com/work-with-me): independent operator working for himself; takes on a small number of margin audits, advisory engagements, and speaking.
 - [Career](https://eitangorodetsky.com/career): Full professional history (888 Holdings, Catena Media, Betsson Group, Speed Media Group, TonyBet).
 - [Contact](https://eitangorodetsky.com/contact): Get in touch.
 
