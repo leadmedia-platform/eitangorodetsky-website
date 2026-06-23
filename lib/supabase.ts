@@ -76,8 +76,15 @@ export async function upsertPendingSubscriber(
   return { token: row.confirm_token, alreadyConfirmed: false };
 }
 
-/** Confirm a subscriber by token. Returns true if a still-pending row flipped. */
-export async function confirmSubscriber(token: string): Promise<boolean> {
+/**
+ * Confirm a subscriber by token. Returns `{ confirmed, email }` — `confirmed`
+ * is true only when a still-pending row flipped this call (so the welcome +
+ * lead-magnet email sends exactly once, not on repeat clicks). `email` is the
+ * confirmed address (or null) so the caller can deliver the magnet.
+ */
+export async function confirmSubscriber(
+  token: string
+): Promise<{ confirmed: boolean; email: string | null }> {
   const res = await rest(
     `${TABLE}?confirm_token=eq.${encodeURIComponent(token)}&confirmed=eq.false`,
     {
@@ -89,9 +96,10 @@ export async function confirmSubscriber(token: string): Promise<boolean> {
       }),
     }
   );
-  if (!res.ok) return false;
+  if (!res.ok) return { confirmed: false, email: null };
   const rows = (await res.json()) as SubscriberRow[];
-  return rows.length > 0;
+  if (rows.length === 0) return { confirmed: false, email: null };
+  return { confirmed: true, email: rows[0].email };
 }
 
 /** Confirmed, not-unsubscribed subscribers — the live send list. */

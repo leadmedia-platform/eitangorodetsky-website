@@ -13,15 +13,23 @@ export default function ConfirmedPage() {
       <div className="max-w-md text-center">
         <p className="font-serif text-3xl font-bold text-brand-dark">You&apos;re in. ✓</p>
         <p className="mt-4 text-brand-gray">
-          Your subscription is confirmed. New essays on building and operating an
-          AI-native business will land in your inbox, roughly monthly.
+          Your subscription is confirmed — and your teardown is on its way to your
+          inbox. New essays on building and operating an AI-native business will
+          land roughly monthly.
         </p>
         <Link
-          href="/writing"
+          href="/the-ai-native-operation"
           className="mt-8 inline-block rounded-full bg-brand-blue px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-teal"
         >
-          Read the latest essays →
+          Read the teardown now →
         </Link>
+        <p className="mt-4 text-sm text-brand-gray">
+          Or{" "}
+          <Link href="/writing" className="text-brand-blue hover:underline underline-offset-4">
+            browse the essays
+          </Link>
+          .
+        </p>
       </div>
     </div>
   );
