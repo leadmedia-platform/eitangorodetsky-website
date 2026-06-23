@@ -43,7 +43,9 @@ export async function POST(req: NextRequest) {
         <h2 style="color: #1B5E8C; margin-bottom: 6px;">One click to confirm</h2>
         <p style="line-height: 1.7; color: #444;">
           Thanks for subscribing to my writing on building and operating an
-          AI-native business. Confirm your email and you're in:
+          AI-native business. Confirm your email and I'll send you the teardown —
+          the four layers of an AI-native operation, the maturity ladder, and 10
+          questions to place your own function:
         </p>
         <p style="margin: 28px 0;">
           <a href="${confirmUrl}"
