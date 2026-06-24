@@ -1,0 +1,50 @@
+---
+title: "I asked five AI engines the same question. They cited different webs."
+dek: "ChatGPT, Claude, Perplexity, Gemini and Google's AI Overviews don't cite the same sources for the same question. I measured how different — and the answer changes how you earn AI visibility."
+date: "2026-06-24"
+readTime: "6 min"
+excerpt: "An experiment: the same buyer questions through five AI engines, every cited domain counted. They overlap far less than you'd assume — and one engine cites almost nothing the others do. What that means if you want AI to recommend you."
+author: "Eitan Gorodetsky"
+pillar: "Frameworks & teardowns"
+framework: "Per-engine targeting"
+frameworks: ["Per-engine targeting"]
+sources:
+  - name: "Author's own measurement, June 2026 — 50 AI answers (5 questions × 2 reps × 5 engines: ChatGPT, Claude, Perplexity, Gemini, Google AI Overviews), every cited domain recorded and de-duplicated."
+    date: "2026-06-24"
+---
+
+**The short version:** When you ask five different AI engines the same question, they cite largely different sources. Optimise for one and you get partial coverage of some and almost none of another. "Get cited by AI" is really five jobs, not one — and the engine most people care about is the least like the rest.
+
+There's a comfortable assumption baked into how people talk about AI visibility: that if an AI recommends you, it's because you've built "authority," and authority travels. Earn it once, show up everywhere. It's a tidy story. I wanted to know if it was true, so I built a small measurement engine and tested it directly.
+
+## The test
+
+I took five buyer-style questions in a single category — the kind of question someone types when they're close to choosing a provider — and ran each one through five answer engines: ChatGPT, Claude, Perplexity, Google's Gemini, and Google's AI Overviews. Two passes each. For every one of the 50 answers, I recorded which domains it cited and reduced them to a clean list.
+
+Then I asked one question of the data: **how much do the five engines' cited-source lists actually overlap?**
+
+## They overlap less than the story predicts
+
+The first thing the engines disagree on is how *widely* to look. Google's AI Overviews cited 88 distinct domains across the run; Claude cited 20. A four-fold difference in how much of the web each one pulls from.
+
+Measuring the overlap honestly takes two numbers, not one. The strict measure (shared domains over combined domains) comes out around **0.08** — almost no overlap. But that measure is unfair when one list is four times longer than another, so I also used the size-robust measure (shared over the *smaller* list). That one tells the more useful story: on average **a quarter** of the smaller engine's sources show up in the larger one, and between Claude, Perplexity and Google's AI Overviews it reaches **about half**.
+
+So: not separate universes, but not interchangeable either. Half of what Claude cites also surfaces in Google's AI Overviews — and the other half doesn't. If you optimise for one engine, you inherit a *slice* of a couple of others and miss the rest.
+
+## One engine is a loner
+
+The sharpest result was about ChatGPT. It shares almost nothing with the other four — by the size-robust measure, between three and eight percent. Where Claude, Perplexity, Gemini and AI Overviews form a loosely connected cluster citing many of the same names, ChatGPT sits off on its own, recommending sources the others basically ignore.
+
+That matters because ChatGPT is, for most people, *the* AI. If your plan to be recommended by AI quietly assumes "ChatGPT and the rest are roughly the same," that assumption breaks at the most important engine first.
+
+## But there is a shared core worth chasing
+
+The flip side. Six domains in my run were cited by **four of the five** engines — a small set of sources carrying enough weight to be recommended almost everywhere at once. None were cited by all five (ChatGPT, again, opts out of most). But that handful is the highest-leverage target in the whole dataset: get referenced where the universal-core sources live, and you compound across engines instead of grinding each one separately.
+
+That's the shape of **per-engine targeting**: a broad, shared layer of authority that buys you partial presence across the cluster, plus an engine-specific layer — most of all for ChatGPT — that nothing else covers for you.
+
+## The honest part
+
+I'd rather you trust this because of how I'll caveat it than in spite of it. This was five questions in one category and one country — directional, not a census; treat the contrasts as the signal, not the decimals. The engines were also measured through slightly different plumbing, which can flatter the overlap between two of them. And the most useful thing that happened wasn't in the numbers at all: my first pass had a measurement bug that made one engine look like an outlier it wasn't. I caught it because I run every finding through an adversarial review before I believe it — the same discipline that separates a measurement you can act on from a chart that just looks convincing.
+
+The practical takeaway is small and firm. If you want AI to recommend you, stop treating "AI" as one audience. Measure each engine. Chase the sources the engines share. And plan for ChatGPT on its own, because it isn't citing what the others cite.
