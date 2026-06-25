@@ -8,6 +8,8 @@ import Analytics from "@/components/global/Analytics";
 import SchemaOrg from "@/components/global/SchemaOrg";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL } from "@/lib/constants";
+
+const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID?.trim();
 import { getPersonSchema, getOrganizationSchema, getWebsiteSchema } from "@/lib/structured-data";
 import "./globals.css";
 
@@ -39,7 +41,10 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   metadataBase: new URL(SITE_URL),
-  verification: { google: "ixcUWOS4mgQdgw0e7-qg5RXSXZ5Xu9_CWmrZTvBF_eU" },
+  verification: {
+    google: "ixcUWOS4mgQdgw0e7-qg5RXSXZ5Xu9_CWmrZTvBF_eU",
+    other: { "msvalidate.01": "B7A3559EBC311B1058CC5EB4C7E8A45C" },
+  },
   keywords: ["Eitan Gorodetsky", "AI-native marketing", "AI-native operations", "operational intelligence", "AI governance", "marketing operations", "margin recovery", "independent operator", "iGaming", "Australia"],
   authors: [{ name: "Eitan Gorodetsky", url: SITE_URL }],
   robots: {
@@ -103,6 +108,11 @@ export default function RootLayout({
         <Footer />
         <Analytics />
         <SpeedInsights />
+        {CLARITY_ID && (
+          <Script id="clarity" strategy="afterInteractive">
+            {`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","${CLARITY_ID}");`}
+          </Script>
+        )}
       </body>
     </html>
   );
