@@ -37,10 +37,19 @@ export default function Footer() {
             <br />
             Central Coast, Australia.
           </p>
-          <p className="mt-4 text-xs italic text-brand-gray">
-            &ldquo;Built with curiosity and too much coffee.&rdquo;
-          </p>
-          <p className="mt-3 text-xs text-brand-gray">
+          <a
+            href="mailto:hello@leadmedia.cx"
+            className="mt-3 block text-sm text-brand-gray transition-colors hover:text-brand-blue"
+          >
+            hello@leadmedia.cx
+          </a>
+          <a
+            href="/work-with-me"
+            className="mt-4 inline-block text-xs font-semibold uppercase tracking-wider text-brand-blue hover:underline"
+          >
+            Work with me →
+          </a>
+          <p className="mt-4 text-xs text-brand-gray">
             &copy; {currentYear} {SITE_NAME}. All rights reserved.
           </p>
         </div>
@@ -83,7 +92,7 @@ export default function Footer() {
             ))}
             <li>
               <a
-                href="mailto:eitangorodetsky@gmail.com"
+                href="mailto:hello@leadmedia.cx"
                 className="text-sm text-brand-gray transition-colors hover:text-brand-blue"
               >
                 Email
